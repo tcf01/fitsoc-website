@@ -1,302 +1,410 @@
-# FitSoc Website — Image Asset Prompts
+# FitSoc Website — Image Generation Prompts
 
-## Summary
+All images follow a unified editorial aesthetic: dark/moody, cinematic, warm tones with subtle film grain. Hong Kong sports lifestyle context. Reference: thesilktea.com visual language.
 
-**Total images needed: 20**
+---
 
-| Section | Count | Type |
-|---------|-------|------|
-| Hero Carousel | 5 | Editorial lifestyle sport photography |
-| Feature Stacking Cards | 3 | Moody background images |
-| Parallax Gallery | 6 | Mix of app screenshot mockups and lifestyle photos |
-| Testimonials | 3 | Avatar / profile photos |
-| Navbar / General | 1 | Logo SVG |
-| Hero Social Proof | 2 | Small avatar cluster photos (optional) |
+## Summary Table
+
+| Section | Image Count | Notes |
+|---|---|---|
+| Hero Carousel | 5 | Full-bleed background photos, draggable carousel |
+| Stacking Photos | 5 | Tilted polaroid-style, 260x340px rendered size |
+| Story Grid | 4 | 4:3 aspect ratio tiles, 2x2 grid |
+| Feature Highlight | 1 | Phone screen screenshot (9:19.5 aspect ratio) |
+| Download CTA | 3 | Phone screen screenshots (center + two flanking) |
+| **Total** | **18** | |
+
+No images are required for SportCarouselSection (emoji + text only) or Footer (SVG icons only).
 
 ---
 
 ## Table of Contents
 
-1. [Hero Carousel — Card 1: Basketball Court at Sunset](#hero-01)
-2. [Hero Carousel — Card 2: Running Club on Victoria Harbour Promenade](#hero-02)
-3. [Hero Carousel — Card 3: Tennis Match Under Floodlights](#hero-03)
-4. [Hero Carousel — Card 4: Hiking Group on Dragon's Back Trail](#hero-04)
-5. [Hero Carousel — Card 5: Badminton Game in Sports Hall](#hero-05)
-6. [Stacking Card — Discover: Urban Court Discovery](#card-discover)
-7. [Stacking Card — Connect: Athletes Meeting Up](#card-connect)
-8. [Stacking Card — Improve: Training Progress](#card-improve)
-9. [Parallax Gallery — Left 1: App Screenshot — Map View](#gallery-left-01)
-10. [Parallax Gallery — Left 2: Lifestyle — Post-Game Huddle](#gallery-left-02)
-11. [Parallax Gallery — Left 3: App Screenshot — Club Feed](#gallery-left-03)
-12. [Parallax Gallery — Right 1: Lifestyle — Stretching at Dawn](#gallery-right-01)
-13. [Parallax Gallery — Right 2: App Screenshot — Session Detail](#gallery-right-02)
-14. [Parallax Gallery — Right 3: Lifestyle — Night Basketball](#gallery-right-03)
-15. [Testimonial Avatar 1: Young Woman — Basketball Player](#avatar-01)
-16. [Testimonial Avatar 2: Young Man — Runner](#avatar-02)
-17. [Testimonial Avatar 3: Young Man — Tennis Player](#avatar-03)
-18. [Logo SVG](#logo-svg)
-19. [Hero Social Proof — Avatar Set A](#social-proof-a)
-20. [Hero Social Proof — Avatar Set B](#social-proof-b)
+- [Hero Carousel](#hero-carousel)
+  - [hero-01 — Basketball Session](#hero-01--basketball-session)
+  - [hero-02 — Running Club](#hero-02--running-club)
+  - [hero-03 — Tennis Match](#hero-03--tennis-match)
+  - [hero-04 — Hiking Group](#hero-04--hiking-group)
+  - [hero-05 — Badminton Game](#hero-05--badminton-game)
+- [Stacking Photos Section](#stacking-photos-section)
+  - [stack-01 — Sport Action A](#stack-01--sport-action-a)
+  - [stack-02 — Sport Action B](#stack-02--sport-action-b)
+  - [stack-03 — Sport Action C](#stack-03--sport-action-c)
+  - [stack-04 — Sport Action D](#stack-04--sport-action-d)
+  - [stack-05 — Sport Action E](#stack-05--sport-action-e)
+- [Story Grid Section](#story-grid-section)
+  - [story-map — Map / Discovery Tile](#story-map--map--discovery-tile)
+  - [story-session — Session / Activity Tile](#story-session--session--activity-tile)
+  - [story-club — Club / Community Tile](#story-club--community-tile)
+  - [story-community — Community / Together Tile](#story-community--together-tile)
+- [Feature Highlight Section](#feature-highlight-section)
+  - [feature-screen-01 — App Map View](#feature-screen-01--app-map-view)
+- [Download CTA Section](#download-cta-section)
+  - [cta-screen-left — App Screen Left](#cta-screen-left--app-screen-left)
+  - [cta-screen-center — App Screen Center](#cta-screen-center--app-screen-center)
+  - [cta-screen-right — App Screen Right](#cta-screen-right--app-screen-right)
 
 ---
 
 ## Hero Carousel
 
-The hero section (`HeroSection.tsx`) renders a horizontally-scrolling carousel of 5 images at `320-500px` wide and `400-600px` tall. Currently using placeholder gradient divs. Image sources are referenced as `/images/hero-1.jpg` through `/images/hero-5.jpg`.
+The carousel auto-scrolls horizontally behind large centered "FitSoc" wordmark text. Each card is rendered at 320–500px wide, 70vh tall, with a dark gradient overlay. Images sit behind the overlay so they should be vivid and high-contrast enough to read through it.
+
+Component: `src/components/sections/HeroSection.tsx`
+Rendered card size: 320px–500px wide × ~70vh tall (landscape-ish crop, portrait safe)
+Recommended export: 1200 × 1600px (portrait), JPEG, quality 90
 
 ---
 
-### <a id="hero-01"></a>Hero Carousel — Card 1: Basketball Court at Sunset
+### hero-01 — Basketball Session
 
-- **ID**: `hero-01`
-- **Section**: Hero Carousel
-- **Dimensions**: 3:4 portrait, minimum 1000x1200px
-- **File path**: `public/images/hero-1.jpg`
-- **Prompt**: Editorial lifestyle photograph of a pickup basketball game on an outdoor rooftop court in Hong Kong at golden hour. Two players mid-action, one driving to the basket. The Victoria Harbour skyline is softly blurred in the background. Dramatic side lighting with long warm shadows. Shallow depth of field. Cinematic color grading with deep shadows, lifted blacks, and warm amber-vermilion tones. Shot on 85mm lens, f/1.8. Premium sports magazine aesthetic.
-- **Style notes**: Dominant warm tones (amber, vermilion #FA5F47). Deep crushed blacks in the shadows. Slight film grain. The mood should feel aspirational and energetic. Composition weighted to the left third to allow text overlay on the right if needed.
+**ID:** `hero-01`
+**Section:** Hero Carousel, slide 1
+**Dimensions:** 1200 × 1600px
+**File path:** `public/images/hero/hero-01.jpg`
 
----
+**Generation prompt:**
+A cinematic portrait-format photo of young adults playing a pickup basketball game on an outdoor half-court in Hong Kong at golden hour. The court is set against the backdrop of dense Hong Kong residential tower blocks with bamboo scaffolding visible in the mid-distance. A player is mid-jump, ball raised overhead, silhouetted against a warm amber sky. Three other players are in motion below. The lighting is low-angle warm sunlight creating long shadows on the concrete. Color grade: deep orange-amber highlights, crushed blacks, slight film grain overlay. Mood: energetic, gritty urban sport.
 
-### <a id="hero-02"></a>Hero Carousel — Card 2: Running Club on Victoria Harbour Promenade
-
-- **ID**: `hero-02`
-- **Section**: Hero Carousel
-- **Dimensions**: 3:4 portrait, minimum 1000x1200px
-- **File path**: `public/images/hero-2.jpg`
-- **Prompt**: Editorial photograph of a small running club (3-4 people) jogging along the Tsim Sha Tsui waterfront promenade at dusk. Hong Kong Island skyline lights reflecting on the harbour water behind them. Runners wearing modern athletic wear. Low-angle shot capturing motion blur on their legs while torsos remain sharp. Moody twilight sky transitioning from deep blue to warm orange at the horizon. Cinematic color grading, warm-cool contrast. Shot on 35mm lens, f/2.8.
-- **Style notes**: Cool blue-purple sky contrasting with warm streetlight / harbour light reflections. Slight motion blur conveys energy. Keep faces partially obscured or in profile for a more editorial, anonymous feel.
+**Style notes:**
+- Warm tones: amber, burnt orange, deep brown shadows
+- Film grain texture, slight halation around highlights
+- No visible faces needed — silhouettes or motion blur acceptable
+- Avoid over-saturated sports photography clichés; aim for editorial magazine feel
 
 ---
 
-### <a id="hero-03"></a>Hero Carousel — Card 3: Tennis Match Under Floodlights
+### hero-02 — Running Club
 
-- **ID**: `hero-03`
-- **Section**: Hero Carousel
-- **Dimensions**: 3:4 portrait, minimum 1000x1200px
-- **File path**: `public/images/hero-3.jpg`
-- **Prompt**: Dramatic editorial photograph of a tennis player mid-serve on an outdoor hard court at night under harsh floodlights. Sweat particles visible in the backlit floodlight beam. Dark background with only the court surface and player illuminated. Strong chiaroscuro lighting. The player is captured in a powerful upward motion, racket behind their head. Cinematic, high-contrast color grading with deep blacks and isolated warm highlights on skin and court surface. Shot on 70-200mm lens, f/2.8.
-- **Style notes**: Extremely high contrast — near-black background with the player carved out by a single hard light source. Vermilion accent could appear as a court line or wristband detail. Minimal color palette: black, warm skin tones, court green-blue.
+**ID:** `hero-02`
+**Section:** Hero Carousel, slide 2
+**Dimensions:** 1200 × 1600px
+**File path:** `public/images/hero/hero-02.jpg`
 
----
+**Generation prompt:**
+A moody editorial photo of a group of runners on the Victoria Harbour waterfront promenade in Hong Kong at dusk. The runners are spread across the frame in a loose pack, all facing away from camera toward the harbor. City skyline glitters in the background, slightly out of focus. The foreground runner is sharp, others bokeh. Wet pavement reflects the city lights in streaks of orange and white. Color grade: cool blue-grey shadows, warm amber street light pockets, high contrast. Mood: determined, contemplative, cinematic.
 
-### <a id="hero-04"></a>Hero Carousel — Card 4: Hiking Group on Dragon's Back Trail
-
-- **ID**: `hero-04`
-- **Section**: Hero Carousel
-- **Dimensions**: 3:4 portrait, minimum 1000x1200px
-- **File path**: `public/images/hero-4.jpg`
-- **Prompt**: Editorial lifestyle photograph of a small hiking group (3 people) on the Dragon's Back trail in Hong Kong, silhouetted against a dramatic sunrise. Lush green tropical vegetation framing the trail. One hiker in the foreground looking out over Shek O beach far below, backpack visible. Volumetric morning mist in the valley. Golden hour backlighting creating rim light around the hikers. Warm amber and earthy tones. Shot on 24mm wide-angle lens, f/5.6.
-- **Style notes**: Airy and aspirational compared to the darker indoor shots. Still maintain the warm color grading but allow more natural greens. The mist adds depth and atmosphere. Composition should lead the eye from foreground hikers to the coastline below.
+**Style notes:**
+- Cooler palette than hero-01 — the gradient in code is `rgba(80,60,40,0.4)` suggesting warm-brown tones bleeding into near-black
+- Reflections and wet surfaces add depth
+- Urban loneliness aesthetic — even in a group, each person feels focused inward
 
 ---
 
-### <a id="hero-05"></a>Hero Carousel — Card 5: Badminton Game in Sports Hall
+### hero-03 — Tennis Match
 
-- **ID**: `hero-05`
-- **Section**: Hero Carousel
-- **Dimensions**: 3:4 portrait, minimum 1000x1200px
-- **File path**: `public/images/hero-5.jpg`
-- **Prompt**: Editorial sports photograph of an intense badminton doubles match inside a dimly-lit Hong Kong community sports hall. One player leaping for a smash shot, shuttlecock frozen mid-air. Fluorescent overhead lights creating dramatic top-down illumination with strong shadows on the wooden court floor. Other players visible but slightly out of focus. Dynamic diagonal composition. Cinematic color grading with desaturated greens from the fluorescent lights mixed with warm skin tones. Shot on 50mm lens, f/1.4.
-- **Style notes**: Indoor sports hall atmosphere — slightly gritty, authentic. The fluorescent lighting should feel intentionally moody rather than flat. Warm skin tones pop against the cooler ambient light. Capture the athleticism and intensity of the moment.
+**ID:** `hero-03`
+**Section:** Hero Carousel, slide 3
+**Dimensions:** 1200 × 1600px
+**File path:** `public/images/hero/hero-03.jpg`
 
----
+**Generation prompt:**
+A dramatic, low-angle editorial photo of a tennis player mid-serve on a floodlit outdoor court at night in Hong Kong. The player is caught at peak extension, racket blurred at contact, tennis ball frozen with slight motion blur trail. The court lights create harsh top-down shadows on the green hard court surface. Background: dark urban skyline, out of focus apartment towers with lit windows creating a bokeh cityscape. Color grade: warm coral highlights from court floodlights against a deep blue-black night sky, subtle film grain. Mood: intense, isolated, premium.
 
-## Feature Stacking Cards
-
-The features section (`FeaturesSection.tsx`) uses 3 sticky stacking cards at `500px` wide and `600-700px` tall. Currently using CSS gradient backgrounds. These images would replace or layer behind the gradients.
-
----
-
-### <a id="card-discover"></a>Stacking Card — Discover: Urban Court Discovery
-
-- **ID**: `card-discover`
-- **Section**: Feature Stacking Cards
-- **Dimensions**: 5:7 portrait, minimum 1000x1400px
-- **File path**: `public/images/features/card-discover.jpg`
-- **Prompt**: Dark, atmospheric photograph of an empty urban basketball court nestled between residential tower blocks in Hong Kong at night. A single overhead streetlight casting a cone of warm light onto the court surface. Wet ground reflecting the light after rain. The surrounding buildings have scattered lit windows creating a mosaic of warm squares in the darkness. No people — the image conveys a hidden gem waiting to be discovered. Deep shadows, moody, cinematic. Shot on 24mm lens, f/2.0.
-- **Style notes**: Very dark overall (will have text overlaid at the bottom). The gradient on this card is dark navy to deep blue (`#1a1a2e` to `#0f3460`), so the image should have cool blue-black tones with isolated warm light accents. The vermilion accent glow in the top-right corner of the card means the image should be darker in that region. Must work with white text overlaid on the lower third.
+**Style notes:**
+- Dominant color note from code: `rgba(250,95,71,0.15)` — a faint coral/red accent, so the image itself should read warm but not overpowering
+- Strong contrast between the lit court and dark surroundings
+- Shallow depth of field on the player
 
 ---
 
-### <a id="card-connect"></a>Stacking Card — Connect: Athletes Meeting Up
+### hero-04 — Hiking Group
 
-- **ID**: `card-connect`
-- **Section**: Feature Stacking Cards
-- **Dimensions**: 5:7 portrait, minimum 1000x1400px
-- **File path**: `public/images/features/card-connect.jpg`
-- **Prompt**: Warm, intimate editorial photograph of a diverse group of young athletes (4-5 people) gathered at a dimly-lit rooftop or outdoor seating area after a sports session. They are sharing drinks, laughing, checking phones. Warm string lights or lanterns in the background. Hong Kong high-rise buildings softly blurred behind them. The scene feels authentic and spontaneous. Warm amber-vermilion color grading, low-key lighting. Shot on 35mm lens, f/1.8. Shallow depth of field with the group in focus.
-- **Style notes**: The card gradient is warm brown-amber (`#23110f` to `#5a2a0f`), so lean into warm, earthy, fire-lit tones. The image should feel like a warm gathering — community and connection. Keep the lower third dark enough for text overlay. Faces can be partially lit, adding to the editorial mood.
+**ID:** `hero-04`
+**Section:** Hero Carousel, slide 4
+**Dimensions:** 1200 × 1600px
+**File path:** `public/images/hero/hero-04.jpg`
 
----
+**Generation prompt:**
+An aerial or high-vantage editorial photograph of a small group of hikers on a ridgeline trail in Hong Kong's hills — Dragon's Back or Lantau Peak. The hikers are small figures in the middle ground against a sweeping panorama: misty green hillsides dropping steeply to the South China Sea, with distant islands. Golden hour light catches the tops of the ridges, casting the valleys in deep shadow. Color grade: desaturated greens, deep forest shadows, warm golden rim light on the ridge, slight haze/atmospheric perspective. Mood: epic, meditative, expansive.
 
-### <a id="card-improve"></a>Stacking Card — Improve: Training Progress
-
-- **ID**: `card-improve`
-- **Section**: Feature Stacking Cards
-- **Dimensions**: 5:7 portrait, minimum 1000x1400px
-- **File path**: `public/images/features/card-improve.jpg`
-- **Prompt**: High-contrast, dramatic photograph of a single athlete mid-training in a dark gym or outdoor space. Close-up from behind, showing defined shoulder and arm muscles as they perform a stretching or warm-up movement. A single hard side light sculpts the body. Sweat visible on the skin. The background is almost completely black. Minimal, powerful, focused. The mood conveys discipline and self-improvement. Shot on 85mm lens, f/1.4. Black and white with subtle warm tone.
-- **Style notes**: The card gradient is near-black (`#0a0a0a` to `#2d2d2d`). This image should be very dark and desaturated — almost monochrome with just a hint of warm skin tone. Think Nike Training Club editorial aesthetic. Lower third must be very dark for text readability. The single light source creates a sculptural, almost abstract quality.
+**Style notes:**
+- Code gradient is `rgba(60,80,60,0.3)` — muted green-grey tint
+- Natural landscape, minimal urban elements visible (unlike other slides)
+- Should feel like a premium outdoor magazine cover
 
 ---
 
-## Parallax Gallery
+### hero-05 — Badminton Game
 
-The parallax gallery (`ParallaxGallerySection.tsx`) has two columns of 3 images each. Left column uses `aspect-[3/4]`, `aspect-[4/3]`, `aspect-[3/4]`. Right column uses `aspect-[4/3]`, `aspect-[3/4]`, `aspect-[4/3]`. Currently all placeholder gradients. Recommend alternating between app screenshot mockups and lifestyle photos.
+**ID:** `hero-05`
+**Section:** Hero Carousel, slide 5
+**Dimensions:** 1200 × 1600px
+**File path:** `public/images/hero/hero-05.jpg`
 
----
+**Generation prompt:**
+An editorial photo of two players in a fast-paced badminton rally inside a sports hall in Hong Kong. Shot from a low angle looking up, one player is caught mid-leap smashing the shuttlecock downward. The fluorescent ceiling lights above create an industrial top-light. The floor is a warm wooden parquet court. Background: dim sports hall with wire mesh dividers and distant spectators slightly out of focus. Color grade: warm tungsten tones from overhead lights, deep shadows at court edges, slight film grain and halation around the ceiling lights. Mood: kinetic, focused, street-sport grit.
 
-### <a id="gallery-left-01"></a>Parallax Gallery — Left 1: App Screenshot — Map View
-
-- **ID**: `gallery-left-01`
-- **Section**: Parallax Gallery (left column)
-- **Dimensions**: 3:4 portrait, minimum 800x1067px
-- **File path**: `public/images/gallery/gallery-left-01.jpg`
-- **Prompt**: Clean mockup of a smartphone displaying the FitSoc app map view screen. The phone is placed on a dark concrete surface, slightly angled, with moody overhead lighting. The screen shows a dark-mode map interface with vermilion (#FA5F47) pins marking sports venues across Hong Kong. Soft shadows beneath the phone. Minimal styling — the focus is the screen content. Dark, editorial product photography.
-- **Style notes**: This can be a composite — photograph a real phone on a dark surface, then overlay the actual app screenshot onto the screen. Alternatively, generate a convincing UI mockup. The surrounding environment should be very dark to match the website's black background. Consider a subtle vermilion light reflection on the surface near the phone.
-
----
-
-### <a id="gallery-left-02"></a>Parallax Gallery — Left 2: Lifestyle — Post-Game Huddle
-
-- **ID**: `gallery-left-02`
-- **Section**: Parallax Gallery (left column)
-- **Dimensions**: 4:3 landscape, minimum 1067x800px
-- **File path**: `public/images/gallery/gallery-left-02.jpg`
-- **Prompt**: Editorial lifestyle photograph of a group of young athletes in a tight huddle on a sports court, shot from slightly above. Hands stacked together in the center in a team cheer. Warm overhead floodlight creating a pool of light on the group while the surrounding court falls into shadow. Diverse group wearing casual athletic wear. The energy is joyful and united. Warm color grading with amber highlights. Shot on 35mm lens, f/2.0.
-- **Style notes**: Landscape orientation. The huddle creates a natural circular composition. Warm tones dominate. This image represents the community and social aspect of FitSoc. Keep it feeling authentic rather than overly posed.
+**Style notes:**
+- Code gradient `rgba(250,95,71,0.1)` — very faint coral overlay, so the image itself should carry warmth
+- Fluorescent-to-tungsten light mix gives interesting color temperature contrast
+- Motion blur on the shuttlecock and smashing arm encouraged
 
 ---
 
-### <a id="gallery-left-03"></a>Parallax Gallery — Left 3: App Screenshot — Club Feed
+## Stacking Photos Section
 
-- **ID**: `gallery-left-03`
-- **Section**: Parallax Gallery (left column)
-- **Dimensions**: 3:4 portrait, minimum 800x1067px
-- **File path**: `public/images/gallery/gallery-left-03.jpg`
-- **Prompt**: Clean mockup of a smartphone displaying the FitSoc app club feed screen. The phone is resting on a dark wooden bench (like a changing room bench). The screen shows a dark-mode social feed with posts, photos, and vermilion accent buttons. Dramatic side lighting from the left. A folded gym towel and water bottle partially visible in the background, out of focus. Dark, editorial product photography.
-- **Style notes**: Similar treatment to gallery-left-01 for visual cohesion across app screenshots. The changing room setting adds context. Screen content should show the club/social features of the app.
+Five photos rendered as tilted, scroll-animated polaroid-style cards stacked on the left side of the section. Each card renders at 260 × 340px with a thin semi-transparent white border (`border-white/10`). Rotations: -6deg, +4deg, -3deg, +7deg, -5deg. They animate in sequentially on scroll.
 
----
+Because these are seen at relatively small rendered sizes and are partially overlapping, the subjects should be immediately readable — bold compositions, strong central subject, minimal background clutter.
 
-### <a id="gallery-right-01"></a>Parallax Gallery — Right 1: Lifestyle — Stretching at Dawn
-
-- **ID**: `gallery-right-01`
-- **Section**: Parallax Gallery (right column)
-- **Dimensions**: 4:3 landscape, minimum 1067x800px
-- **File path**: `public/images/gallery/gallery-right-01.jpg`
-- **Prompt**: Editorial lifestyle photograph of a young woman stretching on a quiet outdoor running track in Hong Kong at dawn. She is in a deep lunge stretch, silhouetted against a pastel sky. Early morning light creating a warm rim light on her hair and shoulders. The track curves away into the soft distance. Atmospheric haze. Serene, focused, peaceful energy. Warm-cool color contrast. Shot on 85mm lens, f/2.0.
-- **Style notes**: Landscape orientation. Softer and more serene than the hero images but still maintaining the warm color grading. The dawn setting provides natural warm-cool contrast. This image balances the high-energy shots with a quieter, contemplative moment.
+Component: `src/components/sections/StackingPhotosSection.tsx`
+Rendered card size: 260 × 340px (portrait)
+Recommended export: 780 × 1020px (3x), JPEG, quality 85
 
 ---
 
-### <a id="gallery-right-02"></a>Parallax Gallery — Right 2: App Screenshot — Session Detail
+### stack-01 — Sport Action A
 
-- **ID**: `gallery-right-02`
-- **Section**: Parallax Gallery (right column)
-- **Dimensions**: 3:4 portrait, minimum 800x1067px
-- **File path**: `public/images/gallery/gallery-right-02.jpg`
-- **Prompt**: Clean mockup of a smartphone displaying the FitSoc app session detail screen. The phone is held in a hand against a blurred dark background (bokeh lights suggesting a night city scene). The screen shows a dark-mode session card with venue details, player list, and a vermilion "Join" button. The hand is lit from the screen glow. Cinematic, shallow depth of field. Dark, editorial product photography.
-- **Style notes**: The hand-held phone adds a human element. The bokeh background keeps it feeling premium and urban. Screen content should clearly show the session-joining feature.
+**ID:** `stack-01`
+**Section:** Stacking Photos, card 1 (rotation: -6deg, frontmost visible)
+**Dimensions:** 780 × 1020px
+**File path:** `public/images/stacking/stack-01.jpg`
 
----
+**Generation prompt:**
+A warm, intimate editorial photo in portrait format of a solo basketball player dribbling on a sun-bleached outdoor concrete court in Hong Kong. Shot close — waist to knee, hands and ball in sharp focus, court surface texture prominent. Worn rubber soles and peeling court paint visible. Color grade: warm dusty amber, blown-out highlights on the concrete, deep shadow pockets. Film grain texture. Slightly overexposed in highlights as if shot on film. Mood: nostalgic, authentic, street.
 
-### <a id="gallery-right-03"></a>Parallax Gallery — Right 3: Lifestyle — Night Basketball
-
-- **ID**: `gallery-right-03`
-- **Section**: Parallax Gallery (right column)
-- **Dimensions**: 4:3 landscape, minimum 1067x800px
-- **File path**: `public/images/gallery/gallery-right-03.jpg`
-- **Prompt**: Wide-angle editorial photograph of a nighttime 3-on-3 basketball game on an outdoor cage court in a dense Hong Kong neighborhood. Harsh overhead light illuminating the court from above. Players mid-game with dynamic movement. Surrounding residential towers rise up on all sides, lit windows creating a vertical grid pattern. Gritty, urban, electric atmosphere. High contrast with deep shadows. Warm-toned floodlight against cool blue ambient city light. Shot on 24mm lens, f/2.8.
-- **Style notes**: Landscape orientation. This is the most "urban" and energetic image in the gallery. The cage court and surrounding towers create a uniquely Hong Kong atmosphere. The contrast between the harsh court light and the ambient city glow gives it cinematic depth.
+**Style notes:**
+- Close crop means no need for background complexity
+- Warm amber / burnt sienna palette — matches code gradient `rgba(250,95,71,0.25)`
+- Soft vignette around edges reinforces polaroid feel
 
 ---
 
-## Testimonials
+### stack-02 — Sport Action B
 
-The testimonials section (`TestimonialsSection.tsx`) shows 3 cards, each with a small `40x40px` circular avatar. Currently using placeholder `div` with `bg-primary/20`.
+**ID:** `stack-02`
+**Section:** Stacking Photos, card 2 (rotation: +4deg)
+**Dimensions:** 780 × 1020px
+**File path:** `public/images/stacking/stack-02.jpg`
 
----
+**Generation prompt:**
+A moody portrait editorial photo of two runners stretching before a run on a staircase in Hong Kong, early morning. Stone steps, iron railing, green hillside visible behind. One runner leans into a calf stretch against the railing, the other checks their watch. Natural flat morning light, slightly overcast. Color grade: muted warm browns, cool grey-green shadows, minimal saturation. Film grain. Mood: preparatory, quiet, authentic.
 
-### <a id="avatar-01"></a>Testimonial Avatar 1: Young Woman — Basketball Player
-
-- **ID**: `avatar-01`
-- **Section**: Testimonials
-- **Dimensions**: 1:1 square, minimum 200x200px
-- **File path**: `public/images/avatars/avatar-01.jpg`
-- **Prompt**: Close-up portrait headshot of a young East Asian woman in her early 20s, smiling naturally. She is wearing a basketball jersey, with slightly messy hair from exercise. Warm, soft lighting from one side. Dark, blurred background. The expression is genuine and approachable. Shot on 85mm lens, f/1.8. Warm color grading.
-- **Style notes**: Small display size (40x40px) so the face should fill most of the frame. Natural and authentic — not a stock photo smile. Warm tones consistent with the site palette. Consider using AI avatar generators (e.g., Generated Photos, Lensa) for consistency and to avoid licensing issues.
-
----
-
-### <a id="avatar-02"></a>Testimonial Avatar 2: Young Man — Runner
-
-- **ID**: `avatar-02`
-- **Section**: Testimonials
-- **Dimensions**: 1:1 square, minimum 200x200px
-- **File path**: `public/images/avatars/avatar-02.jpg`
-- **Prompt**: Close-up portrait headshot of a young East Asian man in his mid-20s, slight smile. He is wearing a running shirt, with a light sheen of sweat. Outdoor setting with soft natural backlight creating a warm rim light. Dark, blurred background. Confident, friendly expression. Shot on 85mm lens, f/1.8. Warm color grading.
-- **Style notes**: Same treatment as avatar-01 for visual consistency. Face fills the frame. Warm skin tones, dark background. At 40x40px display size, simplicity is key.
+**Style notes:**
+- Code gradient `rgba(80,60,40,0.4)` — warm brown tones, rich shadow
+- Two subjects create implied social dynamic — the app connects people
+- No bright logos or branded sportswear visible
 
 ---
 
-### <a id="avatar-03"></a>Testimonial Avatar 3: Young Man — Tennis Player
+### stack-03 — Sport Action C
 
-- **ID**: `avatar-03`
-- **Section**: Testimonials
-- **Dimensions**: 1:1 square, minimum 200x200px
-- **File path**: `public/images/avatars/avatar-03.jpg`
-- **Prompt**: Close-up portrait headshot of a young East Asian man in his early 20s, wearing a tennis polo shirt and a headband. Natural, relaxed expression. Soft side lighting. Dark, blurred outdoor background suggesting a court environment. Shot on 85mm lens, f/1.8. Warm color grading consistent with the other avatars.
-- **Style notes**: Same treatment as the other avatars. Consider generating all three avatars together to ensure stylistic consistency. Alternatively, use illustrated/stylized avatars if photorealistic generation produces inconsistent results.
+**ID:** `stack-03`
+**Section:** Stacking Photos, card 3 (rotation: -3deg)
+**Dimensions:** 780 × 1020px
+**File path:** `public/images/stacking/stack-03.jpg`
 
----
+**Generation prompt:**
+An editorial portrait photo of a group of hikers pausing at a rocky viewpoint on a Hong Kong trail, looking out over the sea. Shot from behind — four figures of varying heights standing at the edge of a rocky outcrop, backs to camera, facing the open horizon. Morning haze over the water, islands faint in the distance. Color grade: deep forest green foreground, warm golden haze on the horizon, cool blue mid-distance, muted and slightly desaturated overall. Film grain. Mood: collective discovery, aspiration.
 
-## General / Navbar
-
----
-
-### <a id="logo-svg"></a>Logo SVG
-
-- **ID**: `logo-svg`
-- **Section**: Navbar / Footer
-- **Dimensions**: SVG, scalable, recommended viewBox around 120x32
-- **File path**: `public/images/logo.svg`
-- **Prompt**: N/A — this should be designed, not generated. The navbar currently uses the text "FitSoc" as a wordmark (`t('logo')`). Design a clean, modern wordmark or logomark in white. Consider: a minimal sans-serif wordmark with the "F" or "S" stylized, or a small geometric icon (abstract flame, running figure, or connected dots) paired with the text. The vermilion (#FA5F47) accent color can be used for a detail element.
-- **Style notes**: Must work at small sizes (navbar height ~32px). Should be legible against both black and transparent backgrounds. Provide both a white version (for dark backgrounds) and a dark version (for light contexts). SVG format for crisp rendering at all sizes.
+**Style notes:**
+- Code gradient `rgba(60,80,60,0.3)` — muted green tones
+- Backs-to-camera composition is intentional: universal, aspirational
+- Strong silhouette contrast against the lighter horizon
 
 ---
 
-### <a id="social-proof-a"></a>Hero Social Proof — Avatar Set A
+### stack-04 — Sport Action D
 
-- **ID**: `social-proof-a`
-- **Section**: Hero (social proof cluster)
-- **Dimensions**: 1:1 square, 64x64px minimum
-- **File path**: `public/images/avatars/social-proof-01.jpg` through `social-proof-04.jpg`
-- **Prompt**: Set of 4 small, tightly-cropped circular headshot portraits of diverse young people (mixed gender, East Asian). Each person appears active/sporty — wearing athletic wear, slightly flushed, natural expressions. Warm, consistent lighting across all four. Dark backgrounds. These display at 32x32px in an overlapping row.
-- **Style notes**: These are extremely small and overlap each other, so only the general impression matters — warm skin tones against dark backgrounds, clearly different people. Generate as a batch for consistency. Could also use the same AI avatar tool as the testimonial avatars.
+**ID:** `stack-04`
+**Section:** Stacking Photos, card 4 (rotation: +7deg)
+**Dimensions:** 780 × 1020px
+**File path:** `public/images/stacking/stack-04.jpg`
 
----
+**Generation prompt:**
+A warm editorial portrait photo of a badminton player's hand gripping a racket handle, close-up, with the blurred background of an indoor sports hall in Hong Kong. The grip tape is worn, hand is athletic and focused. Soft rim light from the hall's fluorescent tubes above. Color grade: warm amber light on skin and grip tape, cool grey background blur, subtle film grain. Mood: detail-focused, craft, dedication.
 
-### <a id="social-proof-b"></a>Hero Social Proof — Avatar Set B
-
-- **ID**: `social-proof-b`
-- **Section**: Hero (social proof cluster) — alternative
-- **Dimensions**: N/A
-- **File path**: N/A
-- **Prompt**: N/A — as an alternative to generating individual avatars for the social proof cluster, consider using a simple CSS/SVG approach: colored circles with initials, or gradient circles matching the brand palette. This avoids the uncanny valley of tiny AI-generated faces at 32px. The current placeholder (`bg-primary/60` circles) already works reasonably well.
-- **Style notes**: This is an optional enhancement. The placeholder circles are acceptable for launch. If real user photos become available, use those instead.
+**Style notes:**
+- Code gradient `rgba(250,95,71,0.15)` — faint coral, so image warmth carries it
+- Extreme close-up crop works well at the 260x340 rendered size
+- Bokeh background should feel like a sports hall, not a studio
 
 ---
 
-## Global Style Guide for All Images
+### stack-05 — Sport Action E
 
-To ensure visual cohesion across all generated images:
+**ID:** `stack-05`
+**Section:** Stacking Photos, card 5 (rotation: -5deg, rearmost)
+**Dimensions:** 780 × 1020px
+**File path:** `public/images/stacking/stack-05.jpg`
 
-- **Color grading**: Warm shadows (push blacks toward brown/amber, never pure black). Highlights should lean warm (amber/vermilion). Avoid cool or clinical tones except for intentional contrast (e.g., night city scenes).
-- **Contrast**: High contrast, lifted blacks. Aim for a look between editorial magazine photography and cinematic film stills.
-- **Film grain**: Add subtle grain (ISO 800-1600 equivalent) to all images for texture and cohesion.
-- **Lens choices**: Use realistic focal lengths and depth of field. Avoid ultra-wide distortion or telephoto compression unless specified.
-- **People**: Young adults (18-28), primarily East Asian to reflect the Hong Kong context. Diverse within that range. Natural expressions, not posed stock-photo smiles. Athletic but not bodybuilder physiques.
-- **Hong Kong context**: Where possible, include recognizable Hong Kong elements — dense residential towers, harbour views, cage courts, MTR stations, wet markets in the background, etc.
-- **Brand color**: Vermilion #FA5F47 should appear as a subtle accent in at least half the images — as a piece of clothing, a court line, a light reflection, or color grading push. Never dominant, always tasteful.
-- **Negative space**: Most images will have text or UI elements overlaid. Ensure at least one edge or region has enough dark, low-detail space for legibility.
+**Generation prompt:**
+A cinematic portrait editorial photo of a football (soccer) game in progress on a caged rooftop court in Hong Kong — the kind of enclosed rooftop pitch common in Kowloon. Shot from ground level inside the cage, looking up slightly. Players in motion, city tower blocks visible through the steel mesh fence above and around. Dramatic late afternoon sidelight cutting through the mesh, casting grid-shadow patterns on the court. Color grade: warm amber sidelight, deep cool shadows, contrast-heavy, film grain. Mood: urban, raw, energetic.
+
+**Style notes:**
+- Code gradient `rgba(90,70,50,0.3)` — warm brown tones
+- The cage/mesh fence is a distinctly Hong Kong visual element — lean into it
+- Motion blur on players acceptable
+
+---
+
+## Story Grid Section
+
+A 2x2 grid of cinematic tiles, each `aspect-[4/3]`, with text overlaid at the bottom. Each tile has its own gradient and a film grain SVG overlay. The tiles represent four core app features: discovering venues on the map, joining sessions, club pages, and community.
+
+Images replace the CSS gradient backgrounds. They should be bold enough to read through a dark gradient overlay (code darkens to `rgba(10,10,10,0.95)` at bottom) and still convey the theme even with the overlaid text.
+
+Component: `src/components/sections/StoryGridSection.tsx`
+Rendered aspect ratio: 4:3 (landscape)
+Recommended export: 1600 × 1200px, JPEG, quality 90
+
+---
+
+### story-map — Map / Discovery Tile
+
+**ID:** `story-map`
+**Section:** Story Grid, tile 1 (key: `map`)
+**Dimensions:** 1600 × 1200px
+**File path:** `public/images/story/story-map.jpg`
+
+**Generation prompt:**
+A cinematic aerial or bird's-eye photograph of a section of Hong Kong — sports courts and facilities visible from above. An overhead shot of a cluster of multi-use sports courts (basketball, tennis, badminton) nestled between residential towers in Kowloon, shot at dusk with courts still lit. The geometry of the courts, their colored surfaces, and the surrounding urban density create an abstract map-like composition. Color grade: deep blue dusk sky, amber court lights, neon signage in the background creating color pops, film grain. Mood: discovery, urban density, possibility.
+
+**Style notes:**
+- Code gradient hint `rgba(250,95,71,0.15)` — faint coral, image should be cool-to-warm with amber court lights
+- The "map" metaphor: overhead view, geometric courts, the city as a grid of opportunity
+- No faces needed — abstract urban sports landscape
+
+---
+
+### story-session — Session / Activity Tile
+
+**ID:** `story-session`
+**Section:** Story Grid, tile 2 (key: `session`)
+**Dimensions:** 1600 × 1200px
+**File path:** `public/images/story/story-session.jpg`
+
+**Generation prompt:**
+A cinematic landscape-format editorial photo of a group of six people arriving at an outdoor sports court in Hong Kong for a pickup game — some carrying rackets, one with a basketball under their arm, all mid-conversation and in motion. Late afternoon golden light. The court surface is prominent in the lower third, city in soft focus behind. Color grade: warm amber golden hour light, rich brown-gold skin tones, deep shadow pockets, film grain. Mood: arrival, anticipation, social energy.
+
+**Style notes:**
+- Code gradient `rgba(80,60,40,0.3)` — warm earthy brown tones
+- This tile represents "joining a session" — the moment of arrival and connection
+- Dynamic but not chaotic — editorial controlled energy
+
+---
+
+### story-club — Club / Community Tile
+
+**ID:** `story-club`
+**Section:** Story Grid, tile 3 (key: `club`)
+**Dimensions:** 1600 × 1200px
+**File path:** `public/images/story/story-club.jpg`
+
+**Generation prompt:**
+A warm editorial landscape photo of a small sports club team post-match huddle in Hong Kong — a running club or badminton club, around eight people of mixed ages gathered in a loose circle, some with arms around each other's shoulders, faces animated in conversation. Shot in a park or near a sports facility, dappled late-afternoon light filtering through trees or an awning. Color grade: warm dappled green-gold light, soft shadows, earthy tones, film grain. Mood: belonging, community, post-effort warmth.
+
+**Style notes:**
+- Code gradient `rgba(60,80,60,0.25)` — muted green, like sunlight through leaves
+- Faces can be visible here — this is about human connection
+- Candid, not posed — caught mid-laugh or conversation
+
+---
+
+### story-community — Community / Together Tile
+
+**ID:** `story-community`
+**Section:** Story Grid, tile 4 (key: `community`)
+**Dimensions:** 1600 × 1200px
+**File path:** `public/images/story/story-community.jpg`
+
+**Generation prompt:**
+A wide cinematic editorial photo of a large informal community sports event in a Hong Kong public park — dozens of people of all ages: some playing badminton, others doing tai chi, children on bikes, a group stretching. Shot from a slight elevation to capture the breadth of the scene, early morning with the park bathed in soft diffused light. In the background: the distinctive Hong Kong skyline or green hills. Color grade: soft warm morning light, gentle haze, muted earth tones and greens, film grain. Mood: vibrant community life, inclusive, the city at play.
+
+**Style notes:**
+- Code gradient `rgba(90,70,50,0.2)` — warm dusty brown
+- The largest, most inclusive scene of all four tiles — the culmination
+- Should feel like a Hong Kong version of a Magnum Photos documentary image
+
+---
+
+## Feature Highlight Section
+
+A single centered phone mockup (aspect ratio 9:19.5, max-width 280px rendered) showcasing one hero app screen. The mockup frame itself is provided by the `PhoneMockup` component (dark bezel, 40px border-radius). The image fills the screen area inside the frame.
+
+The section's heading is "Find your game" (or similar i18n value) — so the screenshot should show the core map/session discovery experience.
+
+Component: `src/components/sections/FeatureHighlightSection.tsx`
+Rendered screen area: ~268px wide × ~582px tall (inside 280px mockup with 6px border)
+Recommended export: 1080 × 2340px (portrait, approximately), PNG or JPEG quality 95
+
+---
+
+### feature-screen-01 — App Map View
+
+**ID:** `feature-screen-01`
+**Section:** Feature Highlight, center phone mockup
+**Dimensions:** 1080 × 2340px
+**File path:** `public/images/feature/feature-screen-01.png`
+
+**Generation prompt:**
+A high-fidelity app screenshot mockup for a dark-themed mobile sports app. The screen shows a full-bleed map view of Hong Kong (dark map tiles, muted street labels in white/grey). Overlaid on the map are several sport session cards as bottom sheet pins — small rounded pill labels showing sport type, time, and participant count in the FitSoc brand color coral/red (#FA5F47). At the bottom of the screen, a partial bottom sheet is visible showing a list of upcoming sessions nearby: "Basketball — Mong Kok — 3pm — 4/8 joined" style entries with sport icons. Top of screen: minimal dark header with location name and a search bar. The overall UI is dark (near-black background `#0A0A0A`), coral accent, white text. Clean, premium, editorial.
+
+**Style notes:**
+- This is a UI screenshot, not a photograph — vector/design tool output preferred over generative image
+- If generating: ultra-realistic phone screen render, no UI chrome beyond the app itself
+- Brand color: `#FA5F47` (coral red) for interactive elements and accent
+- Dark mode: background `#0A0A0A`, card surfaces `#141414`, text white
+
+---
+
+## Download CTA Section
+
+Three phone mockups in a fanned arrangement: left phone tilted -6deg at 60% opacity (max-width ~200px rendered), center phone upright and prominent (max-width 280px rendered), right phone tilted +6deg at 60% opacity (max-width ~200px rendered). Each shows a different app screen.
+
+Component: `src/components/sections/DownloadCTASection.tsx`
+Rendered sizes: center 280px wide, flanking 200px wide
+Recommended export: all at 1080 × 2340px, PNG or JPEG quality 95
+
+---
+
+### cta-screen-left — App Screen Left
+
+**ID:** `cta-screen-left`
+**Section:** Download CTA, left flanking phone (hidden on mobile)
+**Dimensions:** 1080 × 2340px
+**File path:** `public/images/cta/cta-screen-left.png`
+
+**Generation prompt:**
+A high-fidelity dark-mode app screenshot for a sports social app. This screen shows a Club detail page: a club banner image at the top (a moody sports action photo), below it the club name in large white bold text, member count and sport type in coral (#FA5F47) tag chips. A horizontal scroll of member avatar circles below. Then a feed of recent activity posts — text posts with sport emoji, like/comment counts. Dark background `#0A0A0A`, card surfaces `#141414`, white text, coral accents. Clean, premium UI.
+
+**Style notes:**
+- Slightly lower visual priority than the center screen — will be seen at 60% opacity
+- Club page conveys the social/community aspect of the app
+- Consistent dark-mode design language with other screens
+
+---
+
+### cta-screen-center — App Screen Center
+
+**ID:** `cta-screen-center`
+**Section:** Download CTA, center primary phone
+**Dimensions:** 1080 × 2340px
+**File path:** `public/images/cta/cta-screen-center.png`
+
+**Generation prompt:**
+A high-fidelity dark-mode app screenshot for a sports social app. This screen shows a Session detail page — the hero state where a user is about to join a session. Large sport venue photo at top (a Hong Kong basketball court, cinematic/dark). Below: session title "Pickup Basketball @ Mong Kok", time "Today 3:00 PM", venue "Playground Court, Mong Kok". A coral (#FA5F47) "Join Session" button prominently centered. Below: participant avatars with names, skill level chip, session organizer profile. Dark background `#0A0A0A`, card surfaces `#141414`, white text, coral CTA. Clean, premium, inviting.
+
+**Style notes:**
+- This is the hero/primary phone — should be the most polished and complete screen
+- The coral "Join Session" CTA should be visually dominant
+- This screen is the single most important image on the page — invest most detail here
+
+---
+
+### cta-screen-right — App Screen Right
+
+**ID:** `cta-screen-right`
+**Section:** Download CTA, right flanking phone (hidden on mobile)
+**Dimensions:** 1080 × 2340px
+**File path:** `public/images/cta/cta-screen-right.png`
+
+**Generation prompt:**
+A high-fidelity dark-mode app screenshot for a sports social app. This screen shows the main Activity Feed / Home screen: a dark header "What's happening today" with a location chip "Hong Kong". Below: a vertical scroll of session cards — each card has a sport icon, session name, venue, time, and a small participant count pill. Some cards have a subtle coral left-border accent indicating "near you". A sticky bottom tab bar: Home, Map, Sessions, Clubs, Chat. All icons in white/coral. Dark background `#0A0A0A`, card surfaces `#141414`, white text, coral accents.
+
+**Style notes:**
+- Feed view gives a sense of volume and activity — make it feel like a busy, active community
+- Match the -6deg tilt implied by `rotate-6` class in the component
+- Consistent dark-mode design language with other screens
