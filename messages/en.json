@@ -1,113 +1,56 @@
 {
   "nav": {
     "logo": "FitSoc",
-    "download": "Download"
+    "home": "HOME",
+    "features": "FEATURES",
+    "community": "COMMUNITY",
+    "download": "DOWNLOAD"
   },
   "hero": {
+    "brand": "FitSoc",
     "headline": "Find Your Sport,\nFind Your People",
     "subtitle": "Hong Kong's #1 app for discovering sports sessions, joining clubs, and meeting active people near you.",
     "cta": "Download Free",
     "users": "2,000+ active users"
   },
-  "features": {
-    "title": "Everything You Need",
-    "subtitle": "One app for your entire sports life in Hong Kong",
-    "cards": {
-      "discover": {
-        "label": "Discover",
-        "title": "Find Sessions & Venues Across Hong Kong",
-        "description": "Explore an interactive map of sports sessions and venues in real time. From pick-up games to training sessions — it's all here."
-      },
-      "connect": {
-        "label": "Connect",
-        "title": "Build Your Sports Community",
-        "description": "Create or join clubs, chat with teammates, and coordinate sessions. Your sports social network, all in one place."
-      },
-      "improve": {
-        "label": "Improve",
-        "title": "Train Smarter with AI",
-        "description": "Get personalized recommendations for sessions, venues, and clubs. Our AI assistant learns your preferences and helps you level up."
-      }
+  "stacking": {
+    "headline": "FIND YOUR SPORT, FIND YOUR PEOPLE."
+  },
+  "story": {
+    "title": "THE FITSOC STORY",
+    "tiles": {
+      "map": "THE MAP.",
+      "session": "THE SESSION.",
+      "club": "THE CLUB.",
+      "community": "THE COMMUNITY."
     },
-    "items": {
-      "map": {
-        "title": "Interactive Map",
-        "description": "Discover sports sessions and venues across Hong Kong with our real-time map."
-      },
-      "sessions": {
-        "title": "Join Sessions",
-        "description": "Find and join pick-up games, training sessions, and friendly matches nearby."
-      },
-      "clubs": {
-        "title": "Sports Clubs",
-        "description": "Create or join clubs, share updates, and build your sports community."
-      },
-      "chat": {
-        "title": "Group Chat",
-        "description": "Coordinate with teammates, plan sessions, and stay connected in real time."
-      },
-      "ai": {
-        "title": "AI Assistant",
-        "description": "Get personalized recommendations for sessions, venues, and clubs based on your preferences."
-      }
-    }
+    "tagline": "Find Your Sport, Find Your People."
   },
-  "howItWorks": {
-    "title": "Get Started in Minutes",
-    "steps": {
-      "download": {
-        "title": "Download the App",
-        "description": "Get FitSoc free on iOS and Android. Sign up in seconds."
-      },
-      "find": {
-        "title": "Find Your Sport",
-        "description": "Browse the map, discover sessions near you, and join a club that fits."
-      },
-      "play": {
-        "title": "Play & Connect",
-        "description": "Show up, play, and meet people who share your passion for sport."
-      }
-    }
+  "feature": {
+    "heading": "GAME CHANGER.",
+    "leftTitle": "A NEW WAY TO PLAY",
+    "leftBody": "FitSoc reimagines how you discover and join sports in Hong Kong. Browse an interactive map of sessions happening near you, connect with clubs, and show up ready to play. No more group chats, no more guesswork.",
+    "rightTitle": "BUILT FOR HONG KONG",
+    "rightBody": "Every court, every pitch, every trail. FitSoc is designed from the ground up for Hong Kong's unique sports culture — from rooftop basketball to harbor-side running groups. This is your city, your way to play."
   },
-  "stats": {
-    "title": "A Growing Community",
-    "users": "Active Users",
-    "sessions": "Sessions Created",
-    "clubs": "Clubs",
-    "sports": "Sports"
+  "downloadCta": {
+    "heading": "DOWNLOAD FITSOC",
+    "subtitle": "Free to download. Free to play. Find your next session in seconds.",
+    "cta": "GET THE APP"
   },
-  "testimonials": {
-    "title": "What Players Say",
-    "items": {
-      "1": {
-        "quote": "FitSoc helped me find a badminton group within my first week in Hong Kong. Now I play three times a week!",
-        "name": "Sarah L.",
-        "sport": "Badminton"
-      },
-      "2": {
-        "quote": "I started a running club on FitSoc and it grew to 50 members in a month. The app makes organizing sessions so easy.",
-        "name": "Marcus T.",
-        "sport": "Running"
-      },
-      "3": {
-        "quote": "As a newcomer, FitSoc was the fastest way to meet people and stay active. The community is incredibly welcoming.",
-        "name": "Yuki H.",
-        "sport": "Basketball"
-      }
-    }
-  },
-  "download": {
-    "title": "Ready to Play?",
-    "subtitle": "Join thousands of active people in Hong Kong. Free to download, free to play."
+  "sports": {
+    "items": "Basketball,Tennis,Running,Badminton,Hiking,Football,Swimming,Volleyball,Yoga,Climbing,Table Tennis,Boxing"
   },
   "footer": {
-    "tagline": "Find your sport, find your people.",
-    "links": "Links",
-    "about": "About",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "contact": "Contact",
-    "social": "Follow Us",
-    "copyright": "\u00a9 2026 FitSoc HK. All rights reserved."
+    "navHome": "HOME",
+    "navFeatures": "FEATURES",
+    "navDownload": "DOWNLOAD",
+    "navCommunity": "COMMUNITY",
+    "navAnytime": "ANYTIME ANYWHERE",
+    "navContact": "CONTACT",
+    "location": "Hong Kong",
+    "email": "hello@fitsoc.hk",
+    "tagline": "Find Your Sport, Find Your People.",
+    "copyright": "© 2026 FitSoc HK. All rights reserved."
   }
 }

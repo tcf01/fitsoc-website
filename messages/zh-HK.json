@@ -1,113 +1,56 @@
 {
   "nav": {
     "logo": "FitSoc",
+    "home": "主頁",
+    "features": "功能",
+    "community": "社群",
     "download": "下載"
   },
   "hero": {
+    "brand": "FitSoc",
     "headline": "搵到你嘅運動，\n搵到你嘅同伴",
     "subtitle": "香港首選運動社交 App，隨時發掘運動場次、加入社團、認識一齊做運動嘅朋友。",
     "cta": "免費下載",
     "users": "2,000+ 活躍用戶"
   },
-  "features": {
-    "title": "一個 App 搞掂晒",
-    "subtitle": "你喺香港做運動所需要嘅一切",
-    "cards": {
-      "discover": {
-        "label": "探索",
-        "title": "發掘全港運動場次同場地",
-        "description": "透過即時互動地圖，搵到附近嘅自組比賽、訓練同友誼賽。一切盡在掌握。"
-      },
-      "connect": {
-        "label": "連結",
-        "title": "建立你嘅運動社群",
-        "description": "建立或加入社團，同隊友傾偈，安排場次。你嘅運動社交網絡，一個 App 搞掂。"
-      },
-      "improve": {
-        "label": "進步",
-        "title": "用 AI 訓練得更聰明",
-        "description": "獲得場次、場地同社團嘅個人化推薦。AI 助手會學習你嘅喜好，幫你提升水平。"
-      }
+  "stacking": {
+    "headline": "搵到你嘅運動，搵到你嘅同伴。"
+  },
+  "story": {
+    "title": "FITSOC 嘅故事",
+    "tiles": {
+      "map": "地圖。",
+      "session": "場次。",
+      "club": "社團。",
+      "community": "社群。"
     },
-    "items": {
-      "map": {
-        "title": "互動地圖",
-        "description": "透過即時地圖，發掘全港各區嘅運動場次同場地。"
-      },
-      "sessions": {
-        "title": "加入場次",
-        "description": "搵到附近嘅自組比賽、訓練同友誼賽，即刻加入。"
-      },
-      "clubs": {
-        "title": "運動社團",
-        "description": "建立或加入社團，分享動態，組建你嘅運動社群。"
-      },
-      "chat": {
-        "title": "群組聊天",
-        "description": "同隊友即時溝通、安排場次、保持聯繫。"
-      },
-      "ai": {
-        "title": "AI 助手",
-        "description": "根據你嘅喜好，獲得場次、場地同社團嘅個人化推薦。"
-      }
-    }
+    "tagline": "搵到你嘅運動，搵到你嘅同伴。"
   },
-  "howItWorks": {
-    "title": "幾分鐘即可開始",
-    "steps": {
-      "download": {
-        "title": "下載 App",
-        "description": "免費下載 FitSoc，支援 iOS 同 Android，幾秒即可註冊。"
-      },
-      "find": {
-        "title": "搵到你嘅運動",
-        "description": "瀏覽地圖，發掘附近嘅場次，加入適合你嘅社團。"
-      },
-      "play": {
-        "title": "開波交朋友",
-        "description": "現身球場，一齊玩，認識同樣鍾意運動嘅朋友。"
-      }
-    }
+  "feature": {
+    "heading": "改變規則。",
+    "leftTitle": "全新玩法",
+    "leftBody": "FitSoc 重新定義你喺香港發掘同參加運動嘅方式。瀏覽互動地圖，搵到附近嘅場次，加入社團，即刻開波。唔使再喺群組搵人，唔使再估估吓。",
+    "rightTitle": "為香港而設",
+    "rightBody": "每個球場、每條跑道、每條行山徑。FitSoc 專為香港獨特嘅運動文化而設計 — 由天台籃球到海邊跑步。呢個係你嘅城市，你嘅玩法。"
   },
-  "stats": {
-    "title": "不斷壯大嘅社群",
-    "users": "活躍用戶",
-    "sessions": "已建立場次",
-    "clubs": "社團",
-    "sports": "運動種類"
+  "downloadCta": {
+    "heading": "下載 FITSOC",
+    "subtitle": "免費下載，免費使用。幾秒鐘就搵到你嘅下一場運動。",
+    "cta": "下載 APP"
   },
-  "testimonials": {
-    "title": "用戶點講",
-    "items": {
-      "1": {
-        "quote": "FitSoc 幫我喺嚟香港第一個禮拜就搵到羽毛球友，而家一星期打三次！",
-        "name": "Sarah L.",
-        "sport": "羽毛球"
-      },
-      "2": {
-        "quote": "我喺 FitSoc 開咗個跑步社團，一個月就有 50 個會員。呢個 App 令組織場次變得超簡單。",
-        "name": "Marcus T.",
-        "sport": "跑步"
-      },
-      "3": {
-        "quote": "作為新嚟香港嘅人，FitSoc 係我最快認識朋友同保持運動嘅方法。呢個社群真係好 welcoming。",
-        "name": "Yuki H.",
-        "sport": "籃球"
-      }
-    }
-  },
-  "download": {
-    "title": "準備好開波未？",
-    "subtitle": "加入香港數千位活躍運動愛好者。免費下載，免費使用。"
+  "sports": {
+    "items": "籃球,網球,跑步,羽毛球,行山,足球,游泳,排球,瑜伽,攀岩,乒乓球,拳擊"
   },
   "footer": {
+    "navHome": "主頁",
+    "navFeatures": "功能",
+    "navDownload": "下載",
+    "navCommunity": "社群",
+    "navAnytime": "隨時隨地",
+    "navContact": "聯絡我們",
+    "location": "香港",
+    "email": "hello@fitsoc.hk",
     "tagline": "搵到你嘅運動，搵到你嘅同伴。",
-    "links": "連結",
-    "about": "關於我們",
-    "privacy": "私隱政策",
-    "terms": "使用條款",
-    "contact": "聯絡我們",
-    "social": "追蹤我們",
-    "copyright": "\u00a9 2026 FitSoc HK. 保留所有權利。"
+    "copyright": "© 2026 FitSoc HK. 保留所有權利。"
   }
 }

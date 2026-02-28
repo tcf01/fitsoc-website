@@ -3,14 +3,13 @@
 import { useRef, useState, useEffect, useCallback } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import AppStoreBadge from '@/components/ui/AppStoreBadge';
 
 const carouselImages = [
-  { src: '/images/hero-1.jpg', alt: 'Basketball session' },
-  { src: '/images/hero-2.jpg', alt: 'Running club' },
-  { src: '/images/hero-3.jpg', alt: 'Tennis match' },
-  { src: '/images/hero-4.jpg', alt: 'Hiking group' },
-  { src: '/images/hero-5.jpg', alt: 'Badminton game' },
+  { gradient: 'linear-gradient(135deg, rgba(250,95,71,0.2), rgba(20,10,5,0.9))', alt: 'Basketball session' },
+  { gradient: 'linear-gradient(165deg, rgba(80,60,40,0.4), rgba(10,10,10,0.9))', alt: 'Running club' },
+  { gradient: 'linear-gradient(145deg, rgba(250,95,71,0.15), rgba(30,20,10,0.9))', alt: 'Tennis match' },
+  { gradient: 'linear-gradient(155deg, rgba(60,80,60,0.3), rgba(10,10,10,0.9))', alt: 'Hiking group' },
+  { gradient: 'linear-gradient(170deg, rgba(250,95,71,0.1), rgba(20,15,10,0.9))', alt: 'Badminton game' },
 ];
 
 export function HeroSection() {
@@ -25,7 +24,7 @@ export function HeroSection() {
     target: sectionRef,
     offset: ['start start', 'end start'],
   });
-  const overlayOpacity = useTransform(scrollYProgress, [0, 0.5], [0.4, 0.8]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 0.5], [0.3, 0.8]);
 
   const handleMouseDown = useCallback((e: React.MouseEvent) => {
     const track = trackRef.current;
@@ -48,7 +47,6 @@ export function HeroSection() {
 
   const handleMouseUp = useCallback(() => setIsDragging(false), []);
 
-  // Touch handlers for mobile drag
   const touchStartX = useRef(0);
   const touchScrollLeft = useRef(0);
 
@@ -67,12 +65,11 @@ export function HeroSection() {
     track.scrollLeft = touchScrollLeft.current - walk;
   }, []);
 
-  // Auto-scroll carousel
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
     let animId: number;
-    let speed = 0.5;
+    const speed = 0.5;
 
     const autoScroll = () => {
       if (!isDragging && track) {
@@ -90,12 +87,12 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex flex-col justify-end bg-[#000] overflow-hidden"
+      className="relative h-screen flex items-center justify-center bg-black overflow-hidden"
     >
-      {/* Draggable carousel */}
+      {/* Draggable carousel behind everything */}
       <div
         ref={trackRef}
-        className="absolute inset-0 flex gap-4 overflow-x-auto cursor-grab active:cursor-grabbing scrollbar-hide px-4 pt-20 pb-4 items-center"
+        className="absolute inset-0 flex gap-4 overflow-x-auto cursor-grab active:cursor-grabbing px-4 items-center"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
@@ -104,17 +101,14 @@ export function HeroSection() {
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
       >
-        {[...carouselImages, ...carouselImages].map((img, i) => (
+        {[...carouselImages, ...carouselImages, ...carouselImages].map((img, i) => (
           <div
             key={i}
-            className="flex-shrink-0 w-[320px] md:w-[420px] lg:w-[500px] h-[400px] md:h-[520px] lg:h-[600px] rounded-2xl bg-dark-bg/40 overflow-hidden select-none"
+            className="flex-shrink-0 w-[320px] md:w-[420px] lg:w-[500px] h-[70vh] rounded-2xl overflow-hidden select-none"
           >
-            {/* Placeholder gradient cards — replace with <Image> when assets are ready */}
             <div
               className="w-full h-full"
-              style={{
-                background: `linear-gradient(${135 + i * 30}deg, rgba(250,95,71,${0.15 + (i % 3) * 0.1}), rgba(35,17,15,0.8))`,
-              }}
+              style={{ background: img.gradient }}
             />
           </div>
         ))}
@@ -126,38 +120,16 @@ export function HeroSection() {
         style={{ opacity: overlayOpacity }}
       />
 
-      {/* Editorial headline overlay */}
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 pb-16 md:pb-24 lg:pb-32">
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-        >
-          <h1 className="text-[clamp(3rem,8vw,7rem)] font-bold leading-[0.95] text-white whitespace-pre-line tracking-tight">
-            {t('headline')}
-          </h1>
-
-          <p className="mt-6 md:mt-8 text-lg md:text-xl text-[#f8f6f5]/70 max-w-xl leading-relaxed">
-            {t('subtitle')}
-          </p>
-
-          <div className="mt-8 md:mt-10 flex flex-wrap items-center gap-6">
-            <AppStoreBadge />
-          </div>
-
-          <div className="mt-8 flex items-center gap-3">
-            <div className="flex -space-x-2">
-              {[0, 1, 2, 3].map((i) => (
-                <div
-                  key={i}
-                  className="w-8 h-8 rounded-full bg-primary/60 border-2 border-black"
-                />
-              ))}
-            </div>
-            <span className="text-sm text-[#f8f6f5]/50">{t('users')}</span>
-          </div>
-        </motion.div>
-      </div>
+      {/* Centered brand name */}
+      <motion.h1
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, delay: 0.3 }}
+        className="relative z-10 text-white font-bold tracking-tight select-none"
+        style={{ fontSize: 'clamp(4rem, 12vw, 10rem)' }}
+      >
+        {t('brand')}
+      </motion.h1>
     </section>
   );
 }

@@ -1,49 +1,64 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import ScrollReveal from '@/components/animations/ScrollReveal';
 import AppStoreBadge from '@/components/ui/AppStoreBadge';
+import PhoneMockup from '@/components/ui/PhoneMockup';
 
 export function DownloadCTASection() {
-  const t = useTranslations('download');
+  const t = useTranslations('downloadCta');
 
   return (
-    <section
-      id="download"
-      className="relative py-32 md:py-48 px-6 overflow-hidden bg-gradient-to-br from-primary to-primary-hover"
-    >
-      {[0, 1, 2].map((i) => (
-        <motion.div
-          key={i}
-          className="absolute rounded-full bg-white/10 blur-3xl"
-          style={{
-            width: 200 + i * 100,
-            height: 200 + i * 100,
-            top: `${20 + i * 20}%`,
-            left: `${10 + i * 30}%`,
-          }}
-          animate={{
-            x: [0, 30, -20, 0],
-            y: [0, -20, 15, 0],
-          }}
-          transition={{
-            duration: 8 + i * 2,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-      ))}
+    <section id="download" className="bg-black py-32 md:py-48 px-6">
+      <div className="max-w-6xl mx-auto text-center">
+        <ScrollReveal>
+          <h2
+            className="text-white font-bold tracking-tight"
+            style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
+          >
+            {t('heading')}
+          </h2>
+        </ScrollReveal>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
-        <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight leading-tight">
-          {t('title')}
-        </h2>
-        <p className="mt-8 text-lg md:text-xl text-white/80 max-w-xl mx-auto leading-relaxed">
-          {t('subtitle')}
-        </p>
-        <div className="mt-12 flex flex-wrap justify-center gap-4">
-          <AppStoreBadge />
-        </div>
+        <ScrollReveal>
+          <a
+            href="#"
+            className="inline-block mt-8 px-12 py-4 bg-[#FA5F47] text-white font-bold text-sm tracking-[0.15em] uppercase rounded-full hover:bg-[#E63F1C] transition-colors"
+          >
+            {t('cta')}
+          </a>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <p className="mt-6 text-white/40 text-base md:text-lg max-w-lg mx-auto">
+            {t('subtitle')}
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <div className="mt-10 flex justify-center">
+            <AppStoreBadge />
+          </div>
+        </ScrollReveal>
+
+        {/* Phone mockups flanking */}
+        <ScrollReveal>
+          <div className="mt-16 flex justify-center items-end gap-8 md:gap-16">
+            <div className="hidden md:block opacity-60 -rotate-6">
+              <PhoneMockup className="!max-w-[200px]">
+                <div className="w-full h-full bg-gradient-to-br from-[#FA5F47]/15 to-black" />
+              </PhoneMockup>
+            </div>
+            <PhoneMockup>
+              <div className="w-full h-full bg-gradient-to-br from-[#FA5F47]/25 to-black" />
+            </PhoneMockup>
+            <div className="hidden md:block opacity-60 rotate-6">
+              <PhoneMockup className="!max-w-[200px]">
+                <div className="w-full h-full bg-gradient-to-br from-[#FA5F47]/15 to-black" />
+              </PhoneMockup>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
