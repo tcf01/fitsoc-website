@@ -2,6 +2,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { FeaturesSection } from '@/components/sections/FeaturesSection';
+import { ParallaxGallerySection } from '@/components/sections/ParallaxGallerySection';
 import { HowItWorksSection } from '@/components/sections/HowItWorksSection';
 import { CommunityStatsSection } from '@/components/sections/CommunityStatsSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Navbar />
       <HeroSection />
       <FeaturesSection />
+      <ParallaxGallerySection />
       <HowItWorksSection />
       <CommunityStatsSection />
       <TestimonialsSection />

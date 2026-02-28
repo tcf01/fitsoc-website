@@ -1,110 +1,161 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import AppStoreBadge from '@/components/ui/AppStoreBadge';
-import PhoneMockup from '@/components/ui/PhoneMockup';
 
-const floatingEmojis = ['🏀', '🎾', '🏸', '⚽', '🏊', '🧘', '🏃', '🚴'];
+const carouselImages = [
+  { src: '/images/hero-1.jpg', alt: 'Basketball session' },
+  { src: '/images/hero-2.jpg', alt: 'Running club' },
+  { src: '/images/hero-3.jpg', alt: 'Tennis match' },
+  { src: '/images/hero-4.jpg', alt: 'Hiking group' },
+  { src: '/images/hero-5.jpg', alt: 'Badminton game' },
+];
 
 export function HeroSection() {
   const t = useTranslations('hero');
-  const ref = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: sectionRef,
     offset: ['start start', 'end start'],
   });
-  const phoneY = useTransform(scrollYProgress, [0, 1], [0, -80]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 0.5], [0.4, 0.8]);
 
-  const containerVariants = {
-    hidden: {},
-    visible: {
-      transition: { staggerChildren: 0.15 },
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    const track = trackRef.current;
+    if (!track) return;
+    setIsDragging(true);
+    setStartX(e.pageX - track.offsetLeft);
+    setScrollLeft(track.scrollLeft);
+  }, []);
+
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent) => {
+      if (!isDragging || !trackRef.current) return;
+      e.preventDefault();
+      const x = e.pageX - trackRef.current.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      trackRef.current.scrollLeft = scrollLeft - walk;
     },
-  };
+    [isDragging, startX, scrollLeft]
+  );
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
+  const handleMouseUp = useCallback(() => setIsDragging(false), []);
+
+  // Touch handlers for mobile drag
+  const touchStartX = useRef(0);
+  const touchScrollLeft = useRef(0);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    const track = trackRef.current;
+    if (!track) return;
+    touchStartX.current = e.touches[0].pageX - track.offsetLeft;
+    touchScrollLeft.current = track.scrollLeft;
+  }, []);
+
+  const handleTouchMove = useCallback((e: React.TouchEvent) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const x = e.touches[0].pageX - track.offsetLeft;
+    const walk = (x - touchStartX.current) * 1.5;
+    track.scrollLeft = touchScrollLeft.current - walk;
+  }, []);
+
+  // Auto-scroll carousel
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    let animId: number;
+    let speed = 0.5;
+
+    const autoScroll = () => {
+      if (!isDragging && track) {
+        track.scrollLeft += speed;
+        if (track.scrollLeft >= track.scrollWidth - track.clientWidth) {
+          track.scrollLeft = 0;
+        }
+      }
+      animId = requestAnimationFrame(autoScroll);
+    };
+    animId = requestAnimationFrame(autoScroll);
+    return () => cancelAnimationFrame(animId);
+  }, [isDragging]);
 
   return (
     <section
-      ref={ref}
-      className="relative min-h-screen flex items-center bg-dark-bg overflow-hidden"
+      ref={sectionRef}
+      className="relative min-h-screen flex flex-col justify-end bg-[#000] overflow-hidden"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(250,95,71,0.15),transparent_60%)]" />
+      {/* Draggable carousel */}
+      <div
+        ref={trackRef}
+        className="absolute inset-0 flex gap-4 overflow-x-auto cursor-grab active:cursor-grabbing scrollbar-hide px-4 pt-20 pb-4 items-center"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+      >
+        {[...carouselImages, ...carouselImages].map((img, i) => (
+          <div
+            key={i}
+            className="flex-shrink-0 w-[320px] md:w-[420px] lg:w-[500px] h-[400px] md:h-[520px] lg:h-[600px] rounded-2xl bg-dark-bg/40 overflow-hidden select-none"
+          >
+            {/* Placeholder gradient cards — replace with <Image> when assets are ready */}
+            <div
+              className="w-full h-full"
+              style={{
+                background: `linear-gradient(${135 + i * 30}deg, rgba(250,95,71,${0.15 + (i % 3) * 0.1}), rgba(35,17,15,0.8))`,
+              }}
+            />
+          </div>
+        ))}
+      </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
+      {/* Dark overlay */}
+      <motion.div
+        className="absolute inset-0 bg-black pointer-events-none"
+        style={{ opacity: overlayOpacity }}
+      />
+
+      {/* Editorial headline overlay */}
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-6 pb-16 md:pb-24 lg:pb-32">
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="text-white"
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
         >
-          <motion.h1
-            variants={itemVariants}
-            className="text-5xl md:text-7xl font-bold leading-tight whitespace-pre-line"
-          >
+          <h1 className="text-[clamp(3rem,8vw,7rem)] font-bold leading-[0.95] text-white whitespace-pre-line tracking-tight">
             {t('headline')}
-          </motion.h1>
-          <motion.p
-            variants={itemVariants}
-            className="mt-6 text-lg text-white/70 max-w-lg"
-          >
+          </h1>
+
+          <p className="mt-6 md:mt-8 text-lg md:text-xl text-[#f8f6f5]/70 max-w-xl leading-relaxed">
             {t('subtitle')}
-          </motion.p>
-          <motion.div variants={itemVariants} className="mt-8 flex flex-wrap gap-4">
+          </p>
+
+          <div className="mt-8 md:mt-10 flex flex-wrap items-center gap-6">
             <AppStoreBadge />
-          </motion.div>
-          <motion.div
-            variants={itemVariants}
-            className="mt-8 flex items-center gap-3"
-          >
+          </div>
+
+          <div className="mt-8 flex items-center gap-3">
             <div className="flex -space-x-2">
               {[0, 1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className="w-8 h-8 rounded-full bg-primary/60 border-2 border-dark-bg"
+                  className="w-8 h-8 rounded-full bg-primary/60 border-2 border-black"
                 />
               ))}
             </div>
-            <span className="text-sm text-white/60">{t('users')}</span>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          style={{ y: phoneY }}
-          className="relative flex justify-center"
-        >
-          <PhoneMockup>
-            <div className="w-full h-full bg-gradient-to-b from-primary/20 to-primary/5 flex items-center justify-center text-4xl">
-              🗺️
-            </div>
-          </PhoneMockup>
-
-          {floatingEmojis.map((emoji, i) => (
-            <motion.span
-              key={i}
-              className="absolute text-2xl select-none"
-              style={{
-                top: `${15 + (i % 4) * 20}%`,
-                left: `${i % 2 === 0 ? -5 + i * 3 : 75 + (i % 3) * 8}%`,
-              }}
-              animate={{
-                y: [0, -12, 0],
-                rotate: [0, 10, -10, 0],
-              }}
-              transition={{
-                duration: 3 + (i % 3),
-                repeat: Infinity,
-                delay: i * 0.4,
-              }}
-            >
-              {emoji}
-            </motion.span>
-          ))}
+            <span className="text-sm text-[#f8f6f5]/50">{t('users')}</span>
+          </div>
         </motion.div>
       </div>
     </section>

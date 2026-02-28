@@ -12,6 +12,23 @@
   "features": {
     "title": "一個 App 搞掂晒",
     "subtitle": "你喺香港做運動所需要嘅一切",
+    "cards": {
+      "discover": {
+        "label": "探索",
+        "title": "發掘全港運動場次同場地",
+        "description": "透過即時互動地圖，搵到附近嘅自組比賽、訓練同友誼賽。一切盡在掌握。"
+      },
+      "connect": {
+        "label": "連結",
+        "title": "建立你嘅運動社群",
+        "description": "建立或加入社團，同隊友傾偈，安排場次。你嘅運動社交網絡，一個 App 搞掂。"
+      },
+      "improve": {
+        "label": "進步",
+        "title": "用 AI 訓練得更聰明",
+        "description": "獲得場次、場地同社團嘅個人化推薦。AI 助手會學習你嘅喜好，幫你提升水平。"
+      }
+    },
     "items": {
       "map": {
         "title": "互動地圖",
@@ -91,6 +108,6 @@
     "terms": "使用條款",
     "contact": "聯絡我們",
     "social": "追蹤我們",
-    "copyright": "© 2026 FitSoc HK. 保留所有權利。"
+    "copyright": "\u00a9 2026 FitSoc HK. 保留所有權利。"
   }
 }

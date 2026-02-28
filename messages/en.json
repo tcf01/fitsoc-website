@@ -12,6 +12,23 @@
   "features": {
     "title": "Everything You Need",
     "subtitle": "One app for your entire sports life in Hong Kong",
+    "cards": {
+      "discover": {
+        "label": "Discover",
+        "title": "Find Sessions & Venues Across Hong Kong",
+        "description": "Explore an interactive map of sports sessions and venues in real time. From pick-up games to training sessions — it's all here."
+      },
+      "connect": {
+        "label": "Connect",
+        "title": "Build Your Sports Community",
+        "description": "Create or join clubs, chat with teammates, and coordinate sessions. Your sports social network, all in one place."
+      },
+      "improve": {
+        "label": "Improve",
+        "title": "Train Smarter with AI",
+        "description": "Get personalized recommendations for sessions, venues, and clubs. Our AI assistant learns your preferences and helps you level up."
+      }
+    },
     "items": {
       "map": {
         "title": "Interactive Map",
@@ -91,6 +108,6 @@
     "terms": "Terms",
     "contact": "Contact",
     "social": "Follow Us",
-    "copyright": "© 2026 FitSoc HK. All rights reserved."
+    "copyright": "\u00a9 2026 FitSoc HK. All rights reserved."
   }
 }

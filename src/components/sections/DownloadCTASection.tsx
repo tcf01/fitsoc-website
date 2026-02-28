@@ -10,7 +10,7 @@ export function DownloadCTASection() {
   return (
     <section
       id="download"
-      className="relative py-32 px-6 overflow-hidden bg-gradient-to-br from-primary to-primary-hover"
+      className="relative py-32 md:py-48 px-6 overflow-hidden bg-gradient-to-br from-primary to-primary-hover"
     >
       {[0, 1, 2].map((i) => (
         <motion.div
@@ -34,10 +34,14 @@ export function DownloadCTASection() {
         />
       ))}
 
-      <div className="relative z-10 max-w-3xl mx-auto text-center text-white">
-        <h2 className="text-4xl md:text-6xl font-bold">{t('title')}</h2>
-        <p className="mt-6 text-lg text-white/80">{t('subtitle')}</p>
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
+      <div className="relative z-10 max-w-4xl mx-auto text-center text-white">
+        <h2 className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold tracking-tight leading-tight">
+          {t('title')}
+        </h2>
+        <p className="mt-8 text-lg md:text-xl text-white/80 max-w-xl mx-auto leading-relaxed">
+          {t('subtitle')}
+        </p>
+        <div className="mt-12 flex flex-wrap justify-center gap-4">
           <AppStoreBadge />
         </div>
       </div>

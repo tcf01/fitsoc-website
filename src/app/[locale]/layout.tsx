@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Lexend, Noto_Sans_TC } from 'next/font/google';
+import Preloader from '@/components/animations/Preloader';
 import LenisProvider from '@/components/animations/LenisProvider';
 import GsapProvider from '@/components/animations/GsapProvider';
 import '../globals.css';
@@ -37,6 +38,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${lexend.variable} ${notoSansTC.variable}`}>
       <body className="font-sans">
+        <Preloader />
         <NextIntlClientProvider messages={messages}>
           <LenisProvider>
             <GsapProvider>{children}</GsapProvider>
