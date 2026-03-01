@@ -31,7 +31,11 @@
     "coachDesc": "Instructors and trainers who want visibility, easy booking, and a direct line to active players."
   },
   "stacking": {
-    "headline": "FIND YOUR SPORT, FIND YOUR PEOPLE."
+    "headline": "FIND YOUR SPORT, FIND YOUR PEOPLE.",
+    "card1": "Every journey starts with showing up.",
+    "card2": "Try something new. Surprise yourself.",
+    "card3": "The city is your court.",
+    "card4": "Play together. Grow together."
   },
   "story": {
     "title": "THE FITSOC STORY",

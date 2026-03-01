@@ -13,8 +13,8 @@ export default function HomePage() {
       <Navbar />
       <HeroSection />
       <main className="flex flex-col gap-24 md:gap-32 bg-warm-bg px-6 py-24 md:py-32">
-        <TargetAudienceSection />
         <StackingPhotosSection />
+        <TargetAudienceSection />
         <StoryGridSection />
         <FeatureHighlightSection />
         <SportCarouselSection />
