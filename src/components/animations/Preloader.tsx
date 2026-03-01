@@ -59,7 +59,7 @@ export default function Preloader() {
         .preloader-overlay {
           position: fixed;
           inset: 0;
-          z-index: 50;
+          z-index: 9999;
           background: #23110f;
           display: flex;
           flex-direction: column;

@@ -170,6 +170,15 @@ export function HeroSection() {
             {t('brand')}
           </motion.h1>
 
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-white/50 text-sm md:text-base tracking-[0.2em] uppercase select-none"
+          >
+            {t('tagline')}
+          </motion.p>
+
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
