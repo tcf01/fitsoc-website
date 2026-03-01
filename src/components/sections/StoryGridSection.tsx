@@ -4,10 +4,10 @@ import { useTranslations } from 'next-intl';
 import ScrollReveal from '@/components/animations/ScrollReveal';
 
 const tiles = [
-  { key: 'map', gradient: 'linear-gradient(160deg, rgba(250,95,71,0.15), rgba(10,10,10,0.95))' },
-  { key: 'session', gradient: 'linear-gradient(160deg, rgba(80,60,40,0.3), rgba(10,10,10,0.95))' },
-  { key: 'club', gradient: 'linear-gradient(160deg, rgba(60,80,60,0.25), rgba(10,10,10,0.95))' },
-  { key: 'community', gradient: 'linear-gradient(160deg, rgba(90,70,50,0.2), rgba(10,10,10,0.95))' },
+  { key: 'map', src: '/images/story/story-map.jpg', gradient: 'linear-gradient(160deg, rgba(250,95,71,0.15), rgba(10,10,10,0.95))' },
+  { key: 'session', src: '/images/story/story-session.jpg', gradient: 'linear-gradient(160deg, rgba(80,60,40,0.3), rgba(10,10,10,0.95))' },
+  { key: 'club', src: '/images/story/story-club.jpg', gradient: 'linear-gradient(160deg, rgba(60,80,60,0.25), rgba(10,10,10,0.95))' },
+  { key: 'community', src: null, gradient: 'linear-gradient(160deg, rgba(90,70,50,0.2), rgba(10,10,10,0.95))' },
 ];
 
 export function StoryGridSection() {
@@ -33,6 +33,12 @@ export function StoryGridSection() {
                 className="relative aspect-[4/3] rounded-lg overflow-hidden flex items-end p-8 md:p-10"
                 style={{ background: tile.gradient }}
               >
+                {tile.src && (
+                  <>
+                    <img src={tile.src} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute inset-0" style={{ background: tile.gradient }} />
+                  </>
+                )}
                 {/* Film grain overlay */}
                 <div
                   className="absolute inset-0 opacity-[0.04] pointer-events-none"

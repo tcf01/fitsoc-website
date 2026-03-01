@@ -5,11 +5,11 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
 const photos = [
-  { rotation: -6, gradient: 'linear-gradient(135deg, rgba(250,95,71,0.25), rgba(20,10,5,0.9))' },
-  { rotation: 4, gradient: 'linear-gradient(155deg, rgba(80,60,40,0.4), rgba(10,10,10,0.9))' },
-  { rotation: -3, gradient: 'linear-gradient(145deg, rgba(60,80,60,0.3), rgba(15,10,5,0.9))' },
-  { rotation: 7, gradient: 'linear-gradient(170deg, rgba(250,95,71,0.15), rgba(20,15,10,0.9))' },
-  { rotation: -5, gradient: 'linear-gradient(160deg, rgba(90,70,50,0.3), rgba(10,10,10,0.9))' },
+  { rotation: -6, src: null, gradient: 'linear-gradient(135deg, rgba(250,95,71,0.25), rgba(20,10,5,0.9))' },
+  { rotation: 4, src: '/images/stacking/stack-02.jpg', gradient: 'linear-gradient(155deg, rgba(80,60,40,0.4), rgba(10,10,10,0.9))' },
+  { rotation: -3, src: '/images/stacking/stack-03.jpg', gradient: 'linear-gradient(145deg, rgba(60,80,60,0.3), rgba(15,10,5,0.9))' },
+  { rotation: 7, src: '/images/stacking/stack-04.jpg', gradient: 'linear-gradient(170deg, rgba(250,95,71,0.15), rgba(20,15,10,0.9))' },
+  { rotation: -5, src: '/images/stacking/stack-05.jpg', gradient: 'linear-gradient(160deg, rgba(90,70,50,0.3), rgba(10,10,10,0.9))' },
 ];
 
 function StackingPhoto({
@@ -36,17 +36,24 @@ function StackingPhoto({
     <motion.div
       className="absolute rounded-lg overflow-hidden shadow-2xl border-[6px] border-white/10"
       style={{
-        width: '260px',
-        height: '340px',
+        width: 'clamp(240px, 50%, 360px)',
+        height: 'clamp(320px, 70%, 460px)',
         rotate: photo.rotation,
-        left: `${10 + index * 30}px`,
-        top: `${20 + index * 25}px`,
+        left: `${index * 50}px`,
+        top: `${index * 30}px`,
         y,
         opacity,
         zIndex: index,
         background: photo.gradient,
       }}
-    />
+    >
+      {photo.src && (
+        <>
+          <img src={photo.src} alt="" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0" style={{ background: photo.gradient }} />
+        </>
+      )}
+    </motion.div>
   );
 }
 

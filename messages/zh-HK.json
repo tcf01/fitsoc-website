@@ -11,7 +11,23 @@
     "headline": "搵到你嘅運動，\n搵到你嘅同伴",
     "subtitle": "香港首選運動社交 App，隨時發掘運動場次、加入社團、認識一齊做運動嘅朋友。",
     "cta": "免費下載",
-    "users": "2,000+ 活躍用戶"
+    "users": "2,000+ 活躍用戶",
+    "waitlistPlaceholder": "輸入你嘅電郵",
+    "waitlistCta": "加入等候名單",
+    "waitlistModalTitle": "搶先體驗",
+    "waitlistModalDesc": "FitSoc 即將推出，留低你嘅電郵，我哋會第一時間通知你。",
+    "waitlistSuccessTitle": "成功登記！",
+    "waitlistSuccess": "我哋會喺適當時候聯絡你。",
+    "waitlistError": "出咗啲問題，請再試一次。"
+  },
+  "audience": {
+    "title": "FITSOC 適合邊個？",
+    "casualTitle": "休閒玩家",
+    "casualDesc": "想搵人打波？瀏覽附近嘅開放場次，到咗就玩 — 唔使預約，唔使煩。",
+    "communityTitle": "運動社群",
+    "communityDesc": "需要工具嚟組織場次、管理會員同擴展社群嘅社團同團體。",
+    "coachTitle": "教練",
+    "coachDesc": "想提升曝光率、輕鬆管理預約、直接接觸活躍運動員嘅教練同導師。"
   },
   "stacking": {
     "headline": "搵到你嘅運動，搵到你嘅同伴。"

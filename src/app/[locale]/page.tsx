@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/sections/HeroSection';
+import { TargetAudienceSection } from '@/components/sections/TargetAudienceSection';
 import { StackingPhotosSection } from '@/components/sections/StackingPhotosSection';
 import { StoryGridSection } from '@/components/sections/StoryGridSection';
 import { FeatureHighlightSection } from '@/components/sections/FeatureHighlightSection';
@@ -12,6 +13,7 @@ export default function HomePage() {
     <>
       <Navbar />
       <HeroSection />
+      <TargetAudienceSection />
       <StackingPhotosSection />
       <StoryGridSection />
       <FeatureHighlightSection />

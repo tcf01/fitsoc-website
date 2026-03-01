@@ -2,6 +2,10 @@
 
 All images follow a unified editorial aesthetic: dark/moody, cinematic, warm tones with subtle film grain. Hong Kong sports lifestyle context. Reference: thesilktea.com visual language.
 
+**Casting / ethnicity guideline:** Reflect Hong Kong's real sports community — majority East Asian (Chinese/HK locals), mixed with South Asian, Southeast Asian, and Western expats. Vary the mix across images: some all-Asian, some mixed Asian + foreigner groups, some with expats playing alongside locals. No single image needs to be perfectly balanced; diversity should feel natural across the full set.
+
+**Generation notes:** No watermarks, no AI-generated text overlays, no logos, no signatures. All output must be clean, production-ready images with no visible branding or generation artifacts.
+
 ---
 
 ## Summary Table
@@ -25,13 +29,13 @@ No images are required for SportCarouselSection (emoji + text only) or Footer (S
   - [hero-01 — Basketball Session](#hero-01--basketball-session)
   - [hero-02 — Running Club](#hero-02--running-club)
   - [hero-03 — Tennis Match](#hero-03--tennis-match)
-  - [hero-04 — Hiking Group](#hero-04--hiking-group)
+  - [hero-04 — Pickleball Session](#hero-04--pickleball-session)
   - [hero-05 — Badminton Game](#hero-05--badminton-game)
 - [Stacking Photos Section](#stacking-photos-section)
   - [stack-01 — Sport Action A](#stack-01--sport-action-a)
   - [stack-02 — Sport Action B](#stack-02--sport-action-b)
-  - [stack-03 — Sport Action C](#stack-03--sport-action-c)
-  - [stack-04 — Sport Action D](#stack-04--sport-action-d)
+  - [stack-03 — Sport Action C (Pickleball)](#stack-03--sport-action-c-pickleball)
+  - [stack-04 — Sport Action D (Tennis Detail)](#stack-04--sport-action-d-tennis-detail)
   - [stack-05 — Sport Action E](#stack-05--sport-action-e)
 - [Story Grid Section](#story-grid-section)
   - [story-map — Map / Discovery Tile](#story-map--map--discovery-tile)
@@ -72,6 +76,7 @@ A cinematic portrait-format photo of young adults playing a pickup basketball ga
 - Film grain texture, slight halation around highlights
 - No visible faces needed — silhouettes or motion blur acceptable
 - Avoid over-saturated sports photography clichés; aim for editorial magazine feel
+- Casting: all Asian players — local HK pickup game feel
 
 ---
 
@@ -89,6 +94,7 @@ A moody editorial photo of a group of runners on the Victoria Harbour waterfront
 - Cooler palette than hero-01 — the gradient in code is `rgba(80,60,40,0.4)` suggesting warm-brown tones bleeding into near-black
 - Reflections and wet surfaces add depth
 - Urban loneliness aesthetic — even in a group, each person feels focused inward
+- Casting: mixed group — mostly Asian runners with one or two Western expats in the pack
 
 ---
 
@@ -106,10 +112,11 @@ A dramatic, low-angle editorial photo of a tennis player mid-serve on a floodlit
 - Dominant color note from code: `rgba(250,95,71,0.15)` — a faint coral/red accent, so the image itself should read warm but not overpowering
 - Strong contrast between the lit court and dark surroundings
 - Shallow depth of field on the player
+- Casting: Asian player
 
 ---
 
-### hero-04 — Hiking Group
+### hero-04 — Pickleball Session
 
 **ID:** `hero-04`
 **Section:** Hero Carousel, slide 4
@@ -117,12 +124,13 @@ A dramatic, low-angle editorial photo of a tennis player mid-serve on a floodlit
 **File path:** `public/images/hero/hero-04.jpg`
 
 **Generation prompt:**
-An aerial or high-vantage editorial photograph of a small group of hikers on a ridgeline trail in Hong Kong's hills — Dragon's Back or Lantau Peak. The hikers are small figures in the middle ground against a sweeping panorama: misty green hillsides dropping steeply to the South China Sea, with distant islands. Golden hour light catches the tops of the ridges, casting the valleys in deep shadow. Color grade: desaturated greens, deep forest shadows, warm golden rim light on the ridge, slight haze/atmospheric perspective. Mood: epic, meditative, expansive.
+A cinematic portrait-format editorial photo of a doubles pickleball game on a floodlit outdoor court in Hong Kong at twilight. Two players at the net in mid-volley — paddles raised, the wiffle ball frozen between them. A second pair of players visible behind at the baseline. The court is set inside a fenced public sports facility with dense residential towers rising behind, balcony lights dotting the background. Warm tungsten floodlights cast strong downward shadows on the green court surface. Color grade: warm amber-gold floodlight highlights, cool blue-grey twilight sky, crushed blacks in the periphery, subtle film grain. Mood: fast, social, accessible, buzzing energy.
 
 **Style notes:**
-- Code gradient is `rgba(60,80,60,0.3)` — muted green-grey tint
-- Natural landscape, minimal urban elements visible (unlike other slides)
-- Should feel like a premium outdoor magazine cover
+- Code gradient `rgba(60,80,60,0.3)` — muted green-grey tint; the green court surface and twilight sky carry this naturally
+- Pickleball is trending and appeals to a wide age range — composition should feel inclusive and energetic
+- Shallow depth of field on the net players, background pair slightly soft
+- Casting: mixed — two Asian players at the net, one Western expat and one South Asian player at baseline
 
 ---
 
@@ -140,6 +148,7 @@ An editorial photo of two players in a fast-paced badminton rally inside a sport
 - Code gradient `rgba(250,95,71,0.1)` — very faint coral overlay, so the image itself should carry warmth
 - Fluorescent-to-tungsten light mix gives interesting color temperature contrast
 - Motion blur on the shuttlecock and smashing arm encouraged
+- Casting: two Asian players
 
 ---
 
@@ -158,7 +167,7 @@ Recommended export: 780 × 1020px (3x), JPEG, quality 85
 ### stack-01 — Sport Action A
 
 **ID:** `stack-01`
-**Section:** Stacking Photos, card 1 (rotation: -6deg, frontmost visible)
+**Section:** Stacking Photos, card 1 (rotation: -6deg, frontmost visible) 
 **Dimensions:** 780 × 1020px
 **File path:** `public/images/stacking/stack-01.jpg`
 
@@ -169,6 +178,7 @@ A warm, intimate editorial photo in portrait format of a solo basketball player 
 - Close crop means no need for background complexity
 - Warm amber / burnt sienna palette — matches code gradient `rgba(250,95,71,0.25)`
 - Soft vignette around edges reinforces polaroid feel
+- Casting: Asian player
 
 ---
 
@@ -186,10 +196,11 @@ A moody portrait editorial photo of two runners stretching before a run on a sta
 - Code gradient `rgba(80,60,40,0.4)` — warm brown tones, rich shadow
 - Two subjects create implied social dynamic — the app connects people
 - No bright logos or branded sportswear visible
+- Casting: one Asian runner, one Western expat — friends warming up together
 
 ---
 
-### stack-03 — Sport Action C
+### stack-03 — Sport Action C (Pickleball)
 
 **ID:** `stack-03`
 **Section:** Stacking Photos, card 3 (rotation: -3deg)
@@ -197,16 +208,16 @@ A moody portrait editorial photo of two runners stretching before a run on a sta
 **File path:** `public/images/stacking/stack-03.jpg`
 
 **Generation prompt:**
-An editorial portrait photo of a group of hikers pausing at a rocky viewpoint on a Hong Kong trail, looking out over the sea. Shot from behind — four figures of varying heights standing at the edge of a rocky outcrop, backs to camera, facing the open horizon. Morning haze over the water, islands faint in the distance. Color grade: deep forest green foreground, warm golden haze on the horizon, cool blue mid-distance, muted and slightly desaturated overall. Film grain. Mood: collective discovery, aspiration.
+A warm editorial portrait photo of a pickleball paddle resting on a court surface next to a wiffle ball, shot from a low angle close-up. The paddle face is slightly scuffed from play, the perforated ball sits in a small patch of warm floodlight. Behind, out of focus, two pairs of legs and shoes are visible mid-rally on the green court. Color grade: warm amber-gold light on the paddle and ball, muted green court tones, deep shadow at the edges, film grain. Mood: detail-focused, approachable, the new sport everyone's playing.
 
 **Style notes:**
-- Code gradient `rgba(60,80,60,0.3)` — muted green tones
-- Backs-to-camera composition is intentional: universal, aspirational
-- Strong silhouette contrast against the lighter horizon
+- Code gradient `rgba(60,80,60,0.3)` — muted green tones; the court surface carries this
+- Close-up detail shot pairs well with stack-04's racket grip close-up — similar intimacy, different sport
+- Soft vignette reinforces the polaroid card feel
 
 ---
 
-### stack-04 — Sport Action D
+### stack-04 — Sport Action D (Tennis Detail)
 
 **ID:** `stack-04`
 **Section:** Stacking Photos, card 4 (rotation: +7deg)
@@ -214,12 +225,12 @@ An editorial portrait photo of a group of hikers pausing at a rocky viewpoint on
 **File path:** `public/images/stacking/stack-04.jpg`
 
 **Generation prompt:**
-A warm editorial portrait photo of a badminton player's hand gripping a racket handle, close-up, with the blurred background of an indoor sports hall in Hong Kong. The grip tape is worn, hand is athletic and focused. Soft rim light from the hall's fluorescent tubes above. Color grade: warm amber light on skin and grip tape, cool grey background blur, subtle film grain. Mood: detail-focused, craft, dedication.
+A warm editorial portrait photo of a tennis player bouncing a ball before serving, shot from behind at waist level. The player's hand tosses the ball upward, racket held loosely in the other hand at their side. Background is a blurred floodlit outdoor court in Hong Kong at night — chain-link fence and distant apartment tower lights create warm bokeh circles. Color grade: warm coral-amber rim light on the player's arm and racket frame, deep blue-black night sky, subtle film grain. Mood: anticipation, ritual, quiet focus before explosive action.
 
 **Style notes:**
-- Code gradient `rgba(250,95,71,0.15)` — faint coral, so image warmth carries it
-- Extreme close-up crop works well at the 260x340 rendered size
-- Bokeh background should feel like a sports hall, not a studio
+- Code gradient `rgba(250,95,71,0.15)` — faint coral; the rim light on the racket frame carries this accent naturally
+- Differs from stack-03's close-up object shot by showing a human moment — adds variety across the stack
+- Bokeh city lights in background reinforce the Hong Kong night-sport atmosphere
 
 ---
 
@@ -230,13 +241,14 @@ A warm editorial portrait photo of a badminton player's hand gripping a racket h
 **Dimensions:** 780 × 1020px
 **File path:** `public/images/stacking/stack-05.jpg`
 
-**Generation prompt:**
+**Generation prompt:** --> Problematic, the image is not quite logical
 A cinematic portrait editorial photo of a football (soccer) game in progress on a caged rooftop court in Hong Kong — the kind of enclosed rooftop pitch common in Kowloon. Shot from ground level inside the cage, looking up slightly. Players in motion, city tower blocks visible through the steel mesh fence above and around. Dramatic late afternoon sidelight cutting through the mesh, casting grid-shadow patterns on the court. Color grade: warm amber sidelight, deep cool shadows, contrast-heavy, film grain. Mood: urban, raw, energetic.
 
 **Style notes:**
 - Code gradient `rgba(90,70,50,0.3)` — warm brown tones
 - The cage/mesh fence is a distinctly Hong Kong visual element — lean into it
 - Motion blur on players acceptable
+- Casting: mixed group — Asian and Southeast Asian players
 
 ---
 
@@ -283,6 +295,7 @@ A cinematic landscape-format editorial photo of a group of six people arriving a
 - Code gradient `rgba(80,60,40,0.3)` — warm earthy brown tones
 - This tile represents "joining a session" — the moment of arrival and connection
 - Dynamic but not chaotic — editorial controlled energy
+- Casting: mixed group of six — four Asian, one Western expat, one South Asian
 
 ---
 
@@ -300,6 +313,7 @@ A warm editorial landscape photo of a small sports club team post-match huddle i
 - Code gradient `rgba(60,80,60,0.25)` — muted green, like sunlight through leaves
 - Faces can be visible here — this is about human connection
 - Candid, not posed — caught mid-laugh or conversation
+- Casting: mostly Asian group with one or two Western expat members — a real HK sports club mix
 
 ---
 
@@ -317,6 +331,7 @@ A wide cinematic editorial photo of a large informal community sports event in a
 - Code gradient `rgba(90,70,50,0.2)` — warm dusty brown
 - The largest, most inclusive scene of all four tiles — the culmination
 - Should feel like a Hong Kong version of a Magnum Photos documentary image
+- Casting: diverse crowd — majority Asian, with visible South Asian, Southeast Asian, and Western faces mixed throughout naturally
 
 ---
 

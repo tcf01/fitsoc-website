@@ -11,7 +11,23 @@
     "headline": "Find Your Sport,\nFind Your People",
     "subtitle": "Hong Kong's #1 app for discovering sports sessions, joining clubs, and meeting active people near you.",
     "cta": "Download Free",
-    "users": "2,000+ active users"
+    "users": "2,000+ active users",
+    "waitlistPlaceholder": "Enter your email",
+    "waitlistCta": "Join Waitlist",
+    "waitlistModalTitle": "Get Early Access",
+    "waitlistModalDesc": "Be the first to know when FitSoc launches. Drop your email and we'll keep you posted.",
+    "waitlistSuccessTitle": "You're In!",
+    "waitlistSuccess": "We'll be in touch when it's time to play.",
+    "waitlistError": "Something went wrong. Please try again."
+  },
+  "audience": {
+    "title": "WHO IS FITSOC FOR?",
+    "casualTitle": "Casual Players",
+    "casualDesc": "Looking for pickup games? Browse open sessions nearby and just show up — no commitments, no hassle.",
+    "communityTitle": "Sports Communities",
+    "communityDesc": "Clubs and groups that need tools to organize sessions, manage members, and grow their community.",
+    "coachTitle": "Coaches",
+    "coachDesc": "Instructors and trainers who want visibility, easy booking, and a direct line to active players."
   },
   "stacking": {
     "headline": "FIND YOUR SPORT, FIND YOUR PEOPLE."
