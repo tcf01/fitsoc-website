@@ -8,7 +8,7 @@ export function FeatureHighlightSection() {
   const t = useTranslations('feature');
 
   return (
-    <section className="bg-warm-bg py-32 md:py-48 px-6">
+    <section>
       <div className="max-w-6xl mx-auto">
         {/* Massive heading */}
         <ScrollReveal>

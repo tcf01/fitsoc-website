@@ -20,7 +20,6 @@ export function Navbar() {
     { href: '#', label: t('home') },
     { href: '#features', label: t('features') },
     { href: '#community', label: t('community') },
-    { href: '#download', label: t('download') },
   ];
 
   return (

@@ -16,6 +16,7 @@
   --font-cjk: 'Noto Sans TC', sans-serif;
   --radius-btn: 9999px;
   --radius-card: 16px;
+  --animate-marquee: marquee 30s linear infinite;
 }
 
 html {
@@ -27,4 +28,9 @@ body {
   color: var(--color-charcoal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }

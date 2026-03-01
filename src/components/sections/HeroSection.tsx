@@ -125,7 +125,7 @@ export function HeroSection() {
     <>
       <section
         ref={sectionRef}
-        className="relative h-screen flex items-center justify-center bg-black overflow-hidden"
+        className="relative h-screen flex items-center justify-center bg-dark-bg overflow-hidden"
       >
         {/* Draggable carousel behind everything */}
         <div
@@ -184,7 +184,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             onClick={() => setModalOpen(true)}
-            className="px-10 py-4 bg-[#FA5F47] text-white font-bold text-sm tracking-[0.15em] uppercase rounded-full hover:bg-[#E63F1C] transition-colors"
+            className="px-10 py-4 bg-primary text-white font-bold text-sm tracking-[0.15em] uppercase rounded-full hover:bg-primary-hover transition-colors shadow-[0_4px_14px_rgba(250,95,71,0.3)]"
           >
             {t('waitlistCta')}
           </motion.button>
@@ -212,7 +212,7 @@ export function HeroSection() {
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-md bg-[#111] border border-white/10 rounded-2xl p-8 md:p-10"
+              className="relative w-full max-w-md bg-dark-bg border border-primary/10 rounded-2xl p-8 md:p-10 shadow-[0_10px_25px_-5px_rgba(255,91,66,0.15),0_8px_10px_-6px_rgba(255,91,66,0.1)]"
             >
               {/* Close button */}
               <button
@@ -268,7 +268,7 @@ export function HeroSection() {
                       <button
                         type="submit"
                         disabled={waitlistStatus === 'loading'}
-                        className="w-full py-3 rounded-lg bg-[#FA5F47] text-white font-semibold text-sm tracking-wide hover:bg-[#E63F1C] transition-colors disabled:opacity-50"
+                        className="w-full py-3 rounded-lg bg-primary text-white font-semibold text-sm tracking-wide hover:bg-primary-hover transition-colors disabled:opacity-50"
                       >
                         {waitlistStatus === 'loading' ? '...' : t('waitlistCta')}
                       </button>

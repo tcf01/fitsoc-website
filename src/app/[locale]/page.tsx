@@ -5,7 +5,6 @@ import { TargetAudienceSection } from '@/components/sections/TargetAudienceSecti
 import { StackingPhotosSection } from '@/components/sections/StackingPhotosSection';
 import { StoryGridSection } from '@/components/sections/StoryGridSection';
 import { FeatureHighlightSection } from '@/components/sections/FeatureHighlightSection';
-import { DownloadCTASection } from '@/components/sections/DownloadCTASection';
 import { SportCarouselSection } from '@/components/sections/SportCarouselSection';
 
 export default function HomePage() {
@@ -13,12 +12,13 @@ export default function HomePage() {
     <>
       <Navbar />
       <HeroSection />
-      <TargetAudienceSection />
-      <StackingPhotosSection />
-      <StoryGridSection />
-      <FeatureHighlightSection />
-      <DownloadCTASection />
-      <SportCarouselSection />
+      <main className="flex flex-col gap-24 md:gap-32 bg-warm-bg px-6 py-24 md:py-32">
+        <TargetAudienceSection />
+        <StackingPhotosSection />
+        <StoryGridSection />
+        <FeatureHighlightSection />
+        <SportCarouselSection />
+      </main>
       <Footer />
     </>
   );

@@ -7,18 +7,18 @@ const tiles = [
   { key: 'map', src: '/images/story/story-map.jpg', gradient: 'linear-gradient(160deg, rgba(250,95,71,0.15), rgba(10,10,10,0.95))' },
   { key: 'session', src: '/images/story/story-session.jpg', gradient: 'linear-gradient(160deg, rgba(80,60,40,0.3), rgba(10,10,10,0.95))' },
   { key: 'club', src: '/images/story/story-club.jpg', gradient: 'linear-gradient(160deg, rgba(60,80,60,0.25), rgba(10,10,10,0.95))' },
-  { key: 'community', src: null, gradient: 'linear-gradient(160deg, rgba(90,70,50,0.2), rgba(10,10,10,0.95))' },
+  { key: 'community', src: '/images/story/story-community.jpg', gradient: 'linear-gradient(160deg, rgba(90,70,50,0.2), rgba(10,10,10,0.95))' },
 ];
 
 export function StoryGridSection() {
   const t = useTranslations('story');
 
   return (
-    <section id="features" className="bg-black py-32 md:py-48 px-6">
+    <section id="features">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <h2
-            className="text-center text-white font-bold tracking-tight mb-16 md:mb-24"
+            className="text-center text-charcoal font-bold tracking-tight mb-16 md:mb-24"
             style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}
           >
             {t('title')}
@@ -61,7 +61,7 @@ export function StoryGridSection() {
         {/* Tagline below grid */}
         <ScrollReveal>
           <p
-            className="text-center text-white/50 mt-16 md:mt-24 tracking-wide uppercase"
+            className="text-center text-warm-gray mt-16 md:mt-24 tracking-wide uppercase"
             style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1.125rem)', letterSpacing: '0.15em' }}
           >
             {t('tagline')}

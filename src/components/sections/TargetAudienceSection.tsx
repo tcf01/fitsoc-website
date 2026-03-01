@@ -25,7 +25,7 @@ export function TargetAudienceSection() {
   const t = useTranslations('audience');
 
   return (
-    <section className="bg-warm-bg py-32 md:py-48">
+    <section>
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <h2

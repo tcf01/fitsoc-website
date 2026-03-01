@@ -35,13 +35,10 @@ export function SportCarouselSection() {
   const doubled = [...items, ...items];
 
   return (
-    <section className="bg-warm-bg py-16 md:py-24 overflow-hidden">
+    <section className="overflow-hidden">
       <div className="relative">
         <div
-          className="flex gap-6 animate-marquee whitespace-nowrap"
-          style={{
-            animation: 'marquee 30s linear infinite',
-          }}
+          className="flex gap-6 whitespace-nowrap animate-marquee"
         >
           {doubled.map((sport, i) => (
             <div
@@ -56,17 +53,6 @@ export function SportCarouselSection() {
           ))}
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-      `}</style>
     </section>
   );
 }

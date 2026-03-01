@@ -68,7 +68,7 @@ export function StackingPhotosSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-black py-32 md:py-48 px-6 overflow-hidden"
+      className="relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         {/* LEFT — stacking tilted photos */}
@@ -90,7 +90,7 @@ export function StackingPhotosSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-white font-bold leading-[0.95] tracking-tight"
+            className="text-charcoal font-bold leading-[0.95] tracking-tight"
             style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
           >
             {t('headline')}
