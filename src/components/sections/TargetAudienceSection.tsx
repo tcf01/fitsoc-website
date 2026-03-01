@@ -25,11 +25,11 @@ export function TargetAudienceSection() {
   const t = useTranslations('audience');
 
   return (
-    <section className="bg-black py-32 md:py-48">
+    <section className="bg-warm-bg py-32 md:py-48">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <h2
-            className="text-center text-white font-bold tracking-tight mb-16 md:mb-24"
+            className="text-center text-charcoal font-bold tracking-tight mb-16 md:mb-24"
             style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}
           >
             {t('title')}

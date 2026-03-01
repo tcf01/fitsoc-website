@@ -16,7 +16,7 @@ export function Footer() {
   const t = useTranslations('footer');
 
   return (
-    <footer className="bg-black text-white py-24 md:py-32 px-6">
+    <footer className="bg-dark-bg text-white py-24 md:py-32 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Nav cards row */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-16">

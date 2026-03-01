@@ -35,7 +35,7 @@ export function SportCarouselSection() {
   const doubled = [...items, ...items];
 
   return (
-    <section className="bg-black py-16 md:py-24 overflow-hidden">
+    <section className="bg-warm-bg py-16 md:py-24 overflow-hidden">
       <div className="relative">
         <div
           className="flex gap-6 animate-marquee whitespace-nowrap"
@@ -46,10 +46,10 @@ export function SportCarouselSection() {
           {doubled.map((sport, i) => (
             <div
               key={i}
-              className="flex-shrink-0 flex items-center gap-3 px-6 py-3 border border-white/10 rounded-full"
+              className="flex-shrink-0 flex items-center gap-3 px-6 py-3 border border-primary/20 rounded-full"
             >
               <span className="text-2xl">{sportEmojis[sport.trim()] || '\u{1F3C5}'}</span>
-              <span className="text-white/70 text-sm font-medium tracking-wide uppercase">
+              <span className="text-charcoal text-sm font-medium tracking-wide uppercase">
                 {sport.trim()}
               </span>
             </div>

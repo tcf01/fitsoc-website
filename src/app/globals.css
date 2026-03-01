@@ -7,6 +7,11 @@
   --color-secondary: #06B6D4;
   --color-dark-bg: #23110f;
   --color-warm-bg: #f8f6f5;
+  --color-cream: #FFFBEB;
+  --color-charcoal: #333333;
+  --color-warm-gray: #71716A;
+  --shadow-card: 0 4px 12px rgba(255, 91, 66, 0.08);
+  --shadow-modal: 0 10px 25px -5px rgba(255, 91, 66, 0.15), 0 8px 10px -6px rgba(255, 91, 66, 0.1);
   --font-sans: 'Lexend', sans-serif;
   --font-cjk: 'Noto Sans TC', sans-serif;
   --radius-btn: 9999px;
@@ -19,7 +24,7 @@ html {
 
 body {
   background-color: var(--color-warm-bg);
-  color: var(--color-dark-bg);
+  color: var(--color-charcoal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
